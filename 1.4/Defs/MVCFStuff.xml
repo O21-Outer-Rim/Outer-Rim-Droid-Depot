@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<MVCF.ModDef>
+		<defName>OuterRim_DroidDepot</defName>
+		<label>Outer Rim - Droid Depot</label>
+		<description>Adding ranged attacks for droid equipment.</description>
+		<ActivateFeatures>
+			<li>Drawing</li>
+			<li>RangedAnimals</li>
+			<li>HediffVerbs</li>
+			<li>ApparelVerbs</li>
+			<li>ExtraEquipmentVerbs</li>
+			<li>IndependentFire</li>
+			<li>IntegratedToggle</li>
+		</ActivateFeatures>
+	</MVCF.ModDef>
+
+</Defs>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<Asimov.PawnDef ParentName="OuterRim_BaseHumanoidDroid">
+		<defName>OuterRim_SuperTacticalDroid</defName>
+		<label>Super Tactical Droid</label>
+		<description>A superior model of tactical droid, capable of much more complex calculations than the standard series.</description>
+		<!-- Start of Asimov Data -->
+		<pawnSettings>
+			<!-- Body -->
+			<headTypeWhitelist>
+				<li>OuterRim_Head_SuperTacticalDroid</li>
+			</headTypeWhitelist>
+			<bodyTypeWhitelist>
+				<li>Male</li>
+			</bodyTypeWhitelist>
+		</pawnSettings>
+		<customGraphics>
+			<bodyPath>OuterRim/Droid/SuperTactical/Body/</bodyPath>
+			<shaderType>CutoutComplex</shaderType>
+			<skinColorPairs>
+				<li>
+					<!-- Default Factory Colours -->
+					<colorOne>(130, 150, 176)</colorOne>
+					<colorTwo>(130, 150, 176)</colorTwo>
+					<weight>100</weight>
+				</li>
+				<li>
+					<!-- Default Factory Colours -->
+					<colorOne>(155, 171, 132)</colorOne>
+					<colorTwo>(155, 171, 132)</colorTwo>
+					<weight>100</weight>
+				</li>
+				<li>
+					<!-- Default Factory Colours -->
+					<colorOne>(163, 127, 111)</colorOne>
+					<colorTwo>(163, 127, 111)</colorTwo>
+					<weight>100</weight>
+				</li>
+			</skinColorPairs>
+		</customGraphics>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>true</canUseRanged>
+				<canUseMelee>true</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>true</enableAllWorkTypes>
+				<skillSettings>
+					<li>
+						<skill>Shooting</skill>
+						<level>6</level>
+					</li>
+					<li>
+						<skill>Melee</skill>
+						<level>6</level>
+					</li>
+					<li>
+						<skill>Intellectual</skill>
+						<level>16</level>
+					</li>
+				</skillSettings>
+				<disabledNeeds>
+					<li>Mood</li>
+					<li>Food</li>
+					<li>Rest</li>
+					<li>Joy</li>
+					<li>Beauty</li>
+					<li>Comfort</li>
+					<li>Outdoors</li>
+					<li>Indoors</li>
+					<li>DrugDesire</li>
+					<li>RoomSize</li>
+				</disabledNeeds>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>true</channelTwo>
+			</li>
+		</comps>
+		<!-- End of Asimov Data -->
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<nameGenerator>OuterRim_Namer_DroidGeneric</nameGenerator>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>0.8</baseHealthScale>
+		</race>
+		<butcherProducts>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+			<OuterRim_Durasteel>50</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>3</OuterRim_ComponentHypertech>
+		</butcherProducts>
+		<researchPrerequisites>
+			<li>OuterRim_ProtocolDroids</li>
+		</researchPrerequisites>
+	</Asimov.PawnDef>
+
+	<PawnKindDef>
+		<defName>OuterRim_SuperTacticalDroid</defName>
+		<label>Super Tactical Droid</label>
+		<race>OuterRim_SuperTacticalDroid</race>
+		<combatPower>40</combatPower>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>OuterRimDroidBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="false" />
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>0~0</apparelMoney>
+		<techHediffsChance>0.0</techHediffsChance>
+		<techHediffsMoney>0~0</techHediffsMoney>
+		<techHediffsTags Inherit="false" />
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_PawnKindExtended">
+				<clearApparel>True</clearApparel>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeSuperTacticalDroid</defName>
+		<label>make super tactical droid</label>
+		<description>Make a super tactical droid.</description>
+		<jobString>Making super tactical droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>200</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>16</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_ProtocolDroids</researchPrerequisite>
+		<pawnKind>OuterRim_SuperTacticalDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/SuperTactical/Head/Head_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+	
+</Defs>

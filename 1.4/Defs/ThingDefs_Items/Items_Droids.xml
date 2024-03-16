@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>OuterRim_RestraintBolt</defName>
+		<label>restraint bolt</label>
+		<description>Small mechanical bolt, when attached to a droid it will override it's behavior routines preventing it from "acting out".</description>
+		<graphicData>
+			<texPath>OuterRim/Items/RestraintBolt</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>300</workAmount>
+			<productCount>3</productCount>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use droid restraint bolt</useLabel>
+				<useDuration>0</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>OuterRimDroids.Comp_TargetableOnAnyDroid</compClass>
+			</li>
+			<li>
+				<compClass>OuterRimDroids.Comp_TargetEffect_Restrain</compClass>
+			</li>
+		</comps>
+		<costList>
+			<OuterRim_Durasteel>6</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<techHediffsTags>
+			<li>OuterRim_RestraintBolt</li>
+		</techHediffsTags>
+	</ThingDef>
+
+	<JobDef>
+		<defName>OuterRim_RestrainDroid</defName>
+		<driverClass>OuterRimDroids.JobDriver_RestrainDroid</driverClass>
+		<reportString>restraining TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>OuterRim_DroidReactivationKit</defName>
+		<label>droid restoration kit</label>
+		<description>A repair kit containing the tools and materials, to fully restore a Droid, from wear and tear to missing parts and even reactivating ones that have ceased functioning. Missing parts may be repaired with Makeshift replacements. This won't work if the droids 'brain' is destroyed.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidRepairKit</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>1200</workAmount>
+			<productCount>1</productCount>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use droid restoration kit</useLabel>
+				<useDuration>0</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>OuterRimDroids.Comp_TargetableOnAnyDroid</compClass>
+			</li>
+			<li>
+				<compClass>OuterRimDroids.Comp_TargetEffect_Reactivate</compClass>
+			</li>
+		</comps>
+		<costList>
+			<OuterRim_Durasteel>20</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+	<JobDef>
+		<defName>OuterRim_ReactivateDroid</defName>
+		<driverClass>OuterRimDroids.JobDriver_ReactivateDroid</driverClass>
+		<reportString>reactivating TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>OuterRim_DataSpike</defName>
+		<label>data spike</label>
+		<description>A compact tool filled with specialised circuitry for bypassing security on computers and droids, often used in the reprogramming of droids to bypass the security around ownership protocols.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DataSpike</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<Mass>2</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>1200</workAmount>
+			<productCount>1</productCount>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use dataspike on droid</useLabel>
+				<useDuration>0</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>OuterRimDroids.Comp_TargetableOnDownedDroid</compClass>
+			</li>
+			<li>
+				<compClass>OuterRimDroids.Comp_TargetEffect_Reprogram</compClass>
+			</li>
+		</comps>
+		<costList>
+			<OuterRim_Durasteel>30</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+	<JobDef>
+		<defName>OuterRim_ReprogramDroid</defName>
+		<driverClass>OuterRimDroids.JobDriver_ReprogramDroid</driverClass>
+		<reportString>reprogramming TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+</Defs>

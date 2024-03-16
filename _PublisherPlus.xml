@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.vscode</exclude>
+    <exclude>1.4\Mods\Ideology\Source</exclude>
+    <exclude>1.4\Old</exclude>
+    <exclude>1.4\Source</exclude>
+  </Excluded>
+</Configuration>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<OuterRimDroids.DroidsCannotUse>cannot be used by droids</OuterRimDroids.DroidsCannotUse>
+	<OuterRimDroids.CantEquipReasonNotDroid>This equipment can only be used by droids.</OuterRimDroids.CantEquipReasonNotDroid>
+	<OuterRimDroids.SkillDataDiskLabel>skill datadisk ({0})</OuterRimDroids.SkillDataDiskLabel>
+	<OuterRimDroids.SkillDataDiskDesc>A densely programmed datadisk with skill data for droids.</OuterRimDroids.SkillDataDiskDesc>
+	<OuterRimDroids.SkillDataDiskUse>use skill datadisk to learn {0}</OuterRimDroids.SkillDataDiskUse>
+	<OuterRimDroids.SkillDataDiskUsed>{0} used {1} skill datadisk to go from level {2} to level {3}.</OuterRimDroids.SkillDataDiskUsed>
+</LanguageData>

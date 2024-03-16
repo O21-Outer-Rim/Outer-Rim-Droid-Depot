@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="AsimovAutomatonBase" Name="BaseAnimalDroid" Abstract="True">
+		<statBases>
+			<MoveSpeed>5.2</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+			<ToxicResistance>1</ToxicResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">1</DecompressionResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<soundCallIntervalRange>3000~20000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<recipes>
+			<!-- Makeshift Body Part Replacements -->
+			<li>OuterRim_Droid_InstallMakeshiftReactor</li>
+			<li>OuterRim_Droid_InstallMakeshiftFluidReprocessor</li>
+			<li>OuterRim_Droid_InstallMakeshiftSightSensor</li>
+			<li>OuterRim_Droid_InstallMakeshiftSoundSensor</li>
+			<li>OuterRim_Droid_InstallMakeshiftSmellSensor</li>
+			<li>OuterRim_Droid_InstallMakeshiftArm</li>
+			<li>OuterRim_Droid_InstallMakeshiftHand</li>
+			<li>OuterRim_Droid_InstallMakeshiftLeg</li>
+			<li>OuterRim_Droid_InstallMakeshiftFoot</li>
+			<!-- Standard Body Part Replacements -->
+			<li>OuterRim_Droid_InstallStandardReactor</li>
+			<li>OuterRim_Droid_InstallStandardFluidReprocessor</li>
+			<li>OuterRim_Droid_InstallStandardSightSensor</li>
+			<li>OuterRim_Droid_InstallStandardSoundSensor</li>
+			<li>OuterRim_Droid_InstallStandardSmellSensor</li>
+			<li>OuterRim_Droid_InstallStandardArm</li>
+			<li>OuterRim_Droid_InstallStandardHand</li>
+			<li>OuterRim_Droid_InstallStandardLeg</li>
+			<li>OuterRim_Droid_InstallStandardFoot</li>
+			<!-- Overclocked Body Part Replacements -->
+			<li>OuterRim_Droid_InstallOverclockedReactor</li>
+			<li>OuterRim_Droid_InstallOverclockedFluidReprocessor</li>
+			<li>OuterRim_Droid_InstallOverclockedSightSensor</li>
+			<li>OuterRim_Droid_InstallOverclockedSoundSensor</li>
+			<li>OuterRim_Droid_InstallOverclockedSmellSensor</li>
+			<li>OuterRim_Droid_InstallOverclockedArm</li>
+			<li>OuterRim_Droid_InstallOverclockedHand</li>
+			<li>OuterRim_Droid_InstallOverclockedLeg</li>
+			<li>OuterRim_Droid_InstallOverclockedFoot</li>
+			<!-- Advanced Body Part Replacements -->
+			<li>OuterRim_Droid_InstallAdvancedReactor</li>
+			<li>OuterRim_Droid_InstallAdvancedFluidReprocessor</li>
+			<li>OuterRim_Droid_InstallAdvancedSightSensor</li>
+			<li>OuterRim_Droid_InstallAdvancedSoundSensor</li>
+			<li>OuterRim_Droid_InstallAdvancedSmellSensor</li>
+			<li>OuterRim_Droid_InstallAdvancedArm</li>
+			<li>OuterRim_Droid_InstallAdvancedHand</li>
+			<li>OuterRim_Droid_InstallAdvancedLeg</li>
+			<li>OuterRim_Droid_InstallAdvancedFoot</li>
+			<!-- Shielding -->
+			<li>OuterRim_Droid_InstallDroidDamageShielding_Standard</li>
+			<li>OuterRim_Droid_InstallDroidDamageShielding_Overclocked</li>
+			<li>OuterRim_Droid_InstallDroidDamageShielding_Advanced</li>
+			<li>OuterRim_Droid_InstallEMPDroidShielding</li>
+			<!-- Brain Capacity -->
+
+			<!-- Equipment -->
+
+			<!-- Weapon -->
+			
+			<!-- Important Utility -->
+			<li>OuterRim_ShutDownDroid</li>
+			<li>RemoveBodyPart</li>
+		</recipes>
+		<modExtensions>
+			<li Class="OuterRimDroids.DefModExt_Droid" />
+			<li Class="OuterRimDroids.DefModExt_DroidEquipment" />
+			<li Class="Asimov.DefModExt_AutomatonApparel">
+				<apparelWhitelist>
+					<!-- ========== Armour ========== -->
+					<li>OuterRim_DroidArmorLight</li>
+					<li>OuterRim_DroidArmorModule</li>
+					<li>OuterRim_DroidArmorHeavy</li>
+					<!-- ========== Weapons ========== -->
+					<li>OuterRim_DroidWeapon_BlasterCannon</li>
+					<li>OuterRim_DroidWeapon_TwinWristBlaster</li>
+					<li>OuterRim_DroidWeapon_WristBlasterIon</li>
+					<li>OuterRim_DroidWeapon_WristBlaster</li>
+					<li>OuterRim_DroidWeapon_WristRocket</li>
+					<!-- ========== Other ========== -->
+					<li>OuterRim_DroidDeflectorShield</li>
+					<li>OuterRim_DroidPropulsionJets</li>
+				</apparelWhitelist>
+			</li>
+		</modExtensions>
+		<!-- Butcher Products should be set to 1/4th the costs -->
+		<butcherProducts>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+			<OuterRim_Durasteel>20</OuterRim_Durasteel>
+		</butcherProducts>
+	</ThingDef>
+
+</Defs>

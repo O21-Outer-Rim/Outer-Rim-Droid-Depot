@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseAnimalDroid">
+		<defName>OuterRim_GNKDroid</defName>
+		<label>GNK Power Droid</label>
+		<description>An GNK Power Droid, simply functions as a moving power generator, filling batteries it's close to.</description>
+		<statBases>
+			<MoveSpeed>1.9</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>OuterRim_HumanoidDroid</body>
+			<baseBodySize>1.0</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>OuterRim_Droid_Gonk</soundWounded>
+					<soundDeath>OuterRim_Droid_Gonk</soundDeath>
+					<soundCall>OuterRim_Droid_Gonk</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>false</canUseRanged>
+				<canUseMelee>false</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>false</enableAllWorkTypes>
+				<skillSettings />
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_Electrified">
+				<electroChargeAmount>5</electroChargeAmount>
+				<electroRate>60</electroRate>
+				<electroRadius>3</electroRadius>
+				<batteriesToAffect>
+					<li>Battery</li>
+					<li>Battery_Silver</li>
+					<li>Battery_Gold</li>
+					<li>Battery_Plasteel</li>
+					<li>Battery_Uranium</li>
+					<li>Battery_Advanced</li>
+					<li>Battery_Vanometric</li>
+					<li>Battery4k</li>
+					<li>Battery16k</li>
+					<li>Battery64k</li>
+					<li>Battery256k</li>
+					<li>ChargeBack_Battery_Prototype</li>
+					<li>ChargeBack_Battery</li>
+					<li>SpeedCharge_Battery</li>
+					<li>ResonanceCell_Battery</li>
+					<li>VoidCell_Battery</li>
+					<li>VFE_LargeBattery</li>
+					<li>VFE_SmallBattery</li>
+					<li>VFE_AdvancedBattery</li>
+					<li>VFE_LargeAdvancedBattery</li>
+					<li>AA_BlueGelBattery</li>
+					<li>AA_HexaGelBattery</li>
+					<li>ShipCapacitor</li>
+					<li>ShipCapacitorSmall</li>
+				</batteriesToAffect>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>true</channelTwo>
+				<skinColorPairs>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(138, 136, 125)</colorOne>
+						<colorTwo>(138, 136, 125)</colorTwo>
+						<weight>100</weight>
+					</li>
+				</skinColorPairs>
+			</li>
+		</comps>
+		<modExtensions Inherit="false">
+			<li Class="OuterRimDroids.DefModExt_Droid" />
+			<li Class="OuterRimDroids.DefModExt_DroidEquipment" />
+			<li Class="Asimov.DefModExt_AutomatonApparel">
+				<apparelWhitelist>
+					<!-- ========== Armour ========== -->
+					<li>OuterRim_DroidArmorLight</li>
+					<li>OuterRim_DroidArmorModule</li>
+					<li>OuterRim_DroidArmorHeavy</li>
+					<!-- ========== Weapons ========== -->
+					<li>OuterRim_DroidWeapon_BlasterCannon</li>
+					<li>OuterRim_DroidWeapon_TwinWristBlaster</li>
+					<li>OuterRim_DroidWeapon_WristBlasterIon</li>
+					<li>OuterRim_DroidWeapon_WristBlaster</li>
+					<li>OuterRim_DroidWeapon_WristRocket</li>
+					<!-- ========== Other ========== -->
+					<li>OuterRim_DroidDeflectorShield</li>
+					<li>OuterRim_DroidPropulsionJets</li>
+				</apparelWhitelist>
+			</li>
+		</modExtensions>
+		<researchPrerequisites>
+			<li>OuterRim_PowerDroids</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_GNKDroid</defName>
+		<label>gnk power Droid</label>
+		<race>OuterRim_GNKDroid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/GNK</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(1.8, 1.8)</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeGNKDroid</defName>
+		<label>make gnk power droid</label>
+		<description>Make an gnk power droid.</description>
+		<jobString>Making gnk power droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>80</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_PowerDroids</researchPrerequisite>
+		<pawnKind>OuterRim_GNKDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/GNK_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

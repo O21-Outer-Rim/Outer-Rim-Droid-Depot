@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base: Droid body part -->
+	<ThingDef Name="ORDroidBodyPartBase_Overclocked" Abstract="True">
+		<graphicData>
+			<texPath>OuterRim/Items/DroidBodyPart_Overclocked</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>0</Beauty>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>300</workAmount>
+			<productCount>3</productCount>
+			<workSkill>Crafting</workSkill>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+			<researchPrerequisite>OuterRim_DroidReplacementPartsOver</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<OuterRim_Durasteel>30</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>2</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>OuterRim_DroidParts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>DroidParts</li>
+			<li>DroidParts_Overclocked</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>DroidOverclocked</li>
+		</techHediffsTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+	<RecipeDef Name="ORDroidSurgery_InstallOverclockedBodyPartBase" ParentName="ORDroidSurgery_InstallImplantBase" Abstract="True">
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>100</surgerySuccessChanceFactor>
+		<anesthetize>false</anesthetize>
+		<skillRequirements Inherit="False">
+			<Crafting>8</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- Droid Reactor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidReactor_Overclocked</defName>
+		<label>droid reactor (overclocked)</label>
+		<description>A overclocked droid reactor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedReactor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidReactor_Overclocked</defName>
+		<label>overclocked reactor</label>
+		<labelNoun>a overclocked reactor</labelNoun>
+		<description>An installed overclocked reactor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidReactor_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedReactor</defName>
+		<label>install overclocked reactor</label>
+		<description>Install a overclocked reactor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidReactor_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidReactor_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidReactor_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidReactor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidReactor_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Fluid Reprocessor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidFluidReprocessor_Overclocked</defName>
+		<label>droid fluid reprocessor (overclocked)</label>
+		<description>A overclocked droid fluid reprocessor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedFluidReprocessor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFluidReprocessor_Overclocked</defName>
+		<label>overclocked fluid reprocessor</label>
+		<labelNoun>a overclocked fluid reprocessor</labelNoun>
+		<description>An installed overclocked fluid reprocessor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFluidReprocessor_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedFluidReprocessor</defName>
+		<label>install overclocked fluid reprocessor</label>
+		<description>Install a overclocked fluid reprocessor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFluidReprocessor_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing fluid reprocessor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFluidReprocessor_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFluidReprocessor_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFluidReprocessor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFluidReprocessor_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sight Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidSightSensor_Overclocked</defName>
+		<label>droid sight sensor (overclocked)</label>
+		<description>A overclocked droid sight sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedSightSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSightSensor_Overclocked</defName>
+		<label>overclocked sight sensor</label>
+		<labelNoun>a overclocked sight sensor</labelNoun>
+		<description>An installed overclocked sight sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSightSensor_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedSightSensor</defName>
+		<label>install overclocked sight sensor</label>
+		<description>Install a overclocked sight sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSightSensor_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sight sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSightSensor_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSightSensor_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSightSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSightSensor_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sound Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidSoundSensor_Overclocked</defName>
+		<label>droid sound sensor (overclocked)</label>
+		<description>A overclocked droid sound sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedSoundSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSoundSensor_Overclocked</defName>
+		<label>overclocked sound sensor</label>
+		<labelNoun>a overclocked sound sensor</labelNoun>
+		<description>An installed overclocked sound sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSoundSensor_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedSoundSensor</defName>
+		<label>install overclocked sound sensor</label>
+		<description>Install a overclocked sound sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSoundSensor_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sound sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSoundSensor_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSoundSensor_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSoundSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSoundSensor_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Smell Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidSmellSensor_Overclocked</defName>
+		<label>droid chemical analyser (overclocked)</label>
+		<description>A overclocked droid chemical analyser component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedSmellSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSmellSensor_Overclocked</defName>
+		<label>overclocked chemical analyser</label>
+		<labelNoun>a overclocked chemical analyser</labelNoun>
+		<description>An installed overclocked chemical analyser.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSmellSensor_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedSmellSensor</defName>
+		<label>install overclocked chemical analyser</label>
+		<description>Install a overclocked chemical analyser.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSmellSensor_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing chemical analyser.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSmellSensor_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSmellSensor_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSmellSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSmellSensor_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Arm -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidArm_Overclocked</defName>
+		<label>droid arm (overclocked)</label>
+		<description>A overclocked droid arm replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedArm</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidArm_Overclocked</defName>
+		<label>overclocked arm</label>
+		<labelNoun>a overclocked droid arm</labelNoun>
+		<description>An installed overclocked droid arm.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidArm_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedArm</defName>
+		<label>install overclocked droid arm</label>
+		<description>Install a overclocked droid arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidArm_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidArm_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidArm_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidShoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidArm_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Hand -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidHand_Overclocked</defName>
+		<label>droid hand (overclocked)</label>
+		<description>A overclocked droid hand replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedHand</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidHand_Overclocked</defName>
+		<label>overclocked hand</label>
+		<labelNoun>a overclocked droid hand</labelNoun>
+		<description>An installed overclocked droid hand.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidHand_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedHand</defName>
+		<label>install overclocked droid hand</label>
+		<description>Install a overclocked droid hand.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidHand_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidHand_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidHand_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidHand_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Leg -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidLeg_Overclocked</defName>
+		<label>droid leg (overclocked)</label>
+		<description>A overclocked droid leg replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidLeg_Overclocked</defName>
+		<label>overclocked leg</label>
+		<labelNoun>a overclocked droid leg</labelNoun>
+		<description>An installed overclocked droid leg.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidLeg_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedLeg</defName>
+		<label>install overclocked droid leg</label>
+		<description>Install a overclocked droid leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidLeg_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidLeg_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidLeg_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidLeg_Overclocked</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Foot -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidFoot_Overclocked</defName>
+		<label>droid foot (overclocked)</label>
+		<description>A overclocked droid foot replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallOverclockedFoot</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFoot_Overclocked</defName>
+		<label>overclocked foot</label>
+		<labelNoun>a overclocked droid foot</labelNoun>
+		<description>An installed overclocked droid foot.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFoot_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallOverclockedBodyPartBase">
+		<defName>OuterRim_Droid_InstallOverclockedFoot</defName>
+		<label>install overclocked droid foot</label>
+		<description>Install a overclocked droid foot.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFoot_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid foot.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFoot_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFoot_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFoot</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFoot_Overclocked</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

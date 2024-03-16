@@ -1,0 +1,224 @@
+{
+	"files": [
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Armor.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 19,
+					"label": "Apparel: Droid Armor (Light)"
+				},
+				{
+					"line": 60,
+					"column": 8,
+					"label": "Apparel: Droid Armor (Medium)"
+				},
+				{
+					"line": 115,
+					"column": 9,
+					"label": "Apparel: Droid Armor (Heavy)"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_DeflectorShield.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel: Droid Deflector Shield"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Jetpack.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel: Droid Propulsion Jets"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Weapon_TwinWristBlaster.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel Weapon: Twin Wrist Blaster"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Weapon_WristBlaster_Ion.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel Weapon: Wrist Blaster (Ion)"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Weapon_WristBlaster.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel Weapon: Wrist Blaster"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Apparel/Droid_Weapon_WristRocket.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Apparel Weapon: Wrist Rocket"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Animal/Droid__BaseAstromech.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: Astromech"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_BattleDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: B1 Battle Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_BattleDroidAdvanced.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: B1A Battle Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_CommandoDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: BX Commando Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Animal/Droid_GNKDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: GNK Power Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_HKSeriesDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: HK Assassin Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_KXSeriesSecurityDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: KX Security Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_Magnaguard.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: MagnaGuard Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Animal/Droid_MSEDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: MSE Repair Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_ProtocolDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: Protocol Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_SuperBattleDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: B2 Super Battle Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_SuperTacticalDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: Super Tactical Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Humanlike/Droid_TacticalDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: Tactical Droid"
+				}
+			]
+		},
+		{
+			"path": "1.4/Defs/ThingDefs_Automatons/Animal/Droid_DestroyerDroid.xml",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "Race: Destroyer Droid"
+				}
+			]
+		}
+	]
+}

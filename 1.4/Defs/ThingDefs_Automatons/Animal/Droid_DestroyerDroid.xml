@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseAnimalDroid">
+		<defName>OuterRim_DestroyerDroid</defName>
+		<label>Destroyer Droid</label>
+		<description>Manufactured by the Colicoids on Colla IV, droidekas were dangerous and deadly, designed to exterminate their adversaries with extreme prejudice. They are configured with a deflector shield built in.</description>
+		<statBases>
+			<MoveSpeed>4.2</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>OuterRim_AstromechDroid</body>
+			<baseBodySize>1.0</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>OuterRim_Droid_Silent</soundWounded>
+					<soundDeath>OuterRim_Droid_Silent</soundDeath>
+					<soundCall>OuterRim_Droid_Silent</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>3000~20000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>true</canUseRanged>
+				<canUseMelee>false</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>false</enableAllWorkTypes>
+				<enabledWorkTypes>
+					<li>Mining</li>
+					<li>Hauling</li>
+					<li>Cleaning</li>
+				</enabledWorkTypes>
+				<skillSettings>
+					<li>
+						<skill>Shooting</skill>
+						<level>15</level>
+					</li>
+					<li>
+						<skill>Mining</skill>
+						<level>5</level>
+					</li>
+				</skillSettings>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>false</channelTwo>
+				<skinColorPairs>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(138, 74, 52)</colorOne>
+						<colorTwo>(138, 74, 52)</colorTwo>
+						<weight>100</weight>
+					</li>
+				</skinColorPairs>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>OuterRim_BattleDroids</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_DestroyerDroid</defName>
+		<label>Destroyer Droid</label>
+		<race>OuterRim_DestroyerDroid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/Droideka/Droideka</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeDestroyerDroid</defName>
+		<label>make destoyer droid</label>
+		<description>Make a destoyer droid.</description>
+		<jobString>Making destoyer droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>80</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_BattleDroids</researchPrerequisite>
+		<pawnKind>OuterRim_DestroyerDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/Droideka/Droideka_east</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>
