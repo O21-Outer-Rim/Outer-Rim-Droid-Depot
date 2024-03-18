@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TabulaRasa.UpdateDef>
+		<defName>OuterRim_DroidDepot_28022024</defName>
+		<date>2024/02/28</date>
+		<banner>OuterRim/UpdateBanner</banner>
+		<contentList>
+			<li>
+				<header>New Droids</header>
+				<text>- Salvage Assist Droid</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>Outer Rim Collection</linkLabel>
+				<linkUrl>https://steamcommunity.com/workshop/filedetails/?id=1927864603</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+	<TabulaRasa.UpdateDef>
+		<defName>OuterRim_DroidDepot_21022024</defName>
+		<date>2024/02/21</date>
+		<banner>OuterRim/UpdateBanner</banner>
+		<contentList>
+			<li>
+				<header>New Droids</header>
+				<text>- Imperial Labor Droid</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>- Droids now show up in their respective research as something the research unlocks.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>Outer Rim Collection</linkLabel>
+				<linkUrl>https://steamcommunity.com/workshop/filedetails/?id=1927864603</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+	<TabulaRasa.UpdateDef>
+		<defName>OuterRim_DroidDepot_02122023</defName>
+		<date>2023/12/02</date>
+		<banner>OuterRim/UpdateBanner</banner>
+		<contentList>
+			<li>
+				<header>New Droids</header>
+				<text>- Destroyer Droid</text>
+			</li>
+			<li>
+				<header>Changes</header>
+				<text>- Droids can now learn normally instead of only skill data disks increasing their skills, just at a 20% rate.
+- 'Animal' droids, when drafted, can now equip droid specific equipment like deflector shields and armour.</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>- 'Animal' droids can now use droid parts for surgery.
+- Several droids have the correct body now where they didn't before (any existing damage on existing droids may be a little wonky)
+- Many of the animal droids had sounds matching that of the MSE droid, now they have their own or are silent.
+- Several typos and incorrect descriptions have been corrected.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>Outer Rim Collection</linkLabel>
+				<linkUrl>https://steamcommunity.com/workshop/filedetails/?id=1927864603</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+</Defs>

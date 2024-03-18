@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_RSeriesDroid</defName>
+		<label>R-Series Droid</label>
+		<race>OuterRim_AstromechDroid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/Astromech/R2</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeRSeriesDroid</defName>
+		<label>make r-series droid</label>
+		<description>Make an r-series droid.</description>
+		<jobString>Making r-series droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>80</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>14</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_AstromechDroids</researchPrerequisite>
+		<pawnKind>OuterRim_RSeriesDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/Astromech/R2_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

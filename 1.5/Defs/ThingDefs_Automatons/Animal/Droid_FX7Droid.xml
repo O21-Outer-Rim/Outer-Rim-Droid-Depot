@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseAnimalDroid">
+		<defName>OuterRim_FX7Droid</defName>
+		<label>fx-7 medical droid</label>
+		<description>An fx-7 medical droid, capable of performing medical procedures.</description>
+		<statBases>
+			<MoveSpeed>2.4</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>OuterRim_QuadWheeledDroid</body>
+			<baseBodySize>0.75</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>OuterRim_Droid_Silent</soundWounded>
+					<soundDeath>OuterRim_Droid_Silent</soundDeath>
+					<soundCall>OuterRim_Droid_Silent</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>false</canUseRanged>
+				<canUseMelee>false</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>false</enableAllWorkTypes>
+				<enabledWorkTypes>
+					<li>Doctor</li>
+					<li>Hauling</li>
+					<li>Cleaning</li>
+				</enabledWorkTypes>
+				<skillSettings>
+					<li>
+						<skill>Medicine</skill>
+						<level>20</level>
+					</li>
+				</skillSettings>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>false</channelOne>
+				<channelTwo>false</channelTwo>
+				<skinColorPairs>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(255, 255, 255)</colorOne>
+						<colorTwo>(255, 255, 255)</colorTwo>
+						<weight>100</weight>
+					</li>
+				</skinColorPairs>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>OuterRim_MedicalDroids</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_FX7Droid</defName>
+		<label>fx-7 medical Droid</label>
+		<race>OuterRim_FX7Droid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/FX7</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(1.8, 1.8)</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeFX7Droid</defName>
+		<label>make fx-7 medical droid</label>
+		<description>Make an fx-7 medical droid.</description>
+		<jobString>Making fx-7 medical droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>360</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>12</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_MedicalDroids</researchPrerequisite>
+		<pawnKind>OuterRim_FX7Droid</pawnKind>
+		<recipeIcon>OuterRim/Droid/FX7_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

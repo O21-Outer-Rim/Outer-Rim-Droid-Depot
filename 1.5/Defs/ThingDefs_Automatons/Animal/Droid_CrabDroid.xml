@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseAnimalDroid">
+		<defName>OuterRim_MuckrakerDroid</defName>
+		<label>Muckraker Crab Droid</label>
+		<description>The LM-432 "Muckraker" crab droid, commonly referred to as the crab droid or simply "Muckraker," was a four-legged droid walker of various sizes manufactured by the Techno Union. These droids are the equivalent of a small tank with the firepower they typically carried, however they are surprisingly useful at mining.</description>
+		<statBases>
+			<MoveSpeed>5.2</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>OuterRim_QuadLeggedDroid</body>
+			<baseBodySize>1.2</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>OuterRim_Droid_Silent</soundWounded>
+					<soundDeath>OuterRim_Droid_Silent</soundDeath>
+					<soundCall>OuterRim_Droid_Silent</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>true</canUseRanged>
+				<canUseMelee>true</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>false</enableAllWorkTypes>
+				<enabledWorkTypes>
+					<li>Mining</li>
+					<li>Hauling</li>
+					<li>Cleaning</li>
+				</enabledWorkTypes>
+				<skillSettings>
+					<li>
+						<skill>Shooting</skill>
+						<level>12</level>
+					</li>
+					<li>
+						<skill>Melee</skill>
+						<level>8</level>
+					</li>
+					<li>
+						<skill>Mining</skill>
+						<level>10</level>
+					</li>
+				</skillSettings>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>false</channelTwo>
+				<skinColorPairs>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(138, 74, 52)</colorOne>
+						<colorTwo>(138, 74, 52)</colorTwo>
+						<weight>100</weight>
+					</li>
+				</skinColorPairs>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>OuterRim_BattleDroids</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_MuckrakerDroid</defName>
+		<label>Muckraker Crab Droid</label>
+		<race>OuterRim_MuckrakerDroid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/Muckraker/CrabDroid</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.7</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeMuckrakerDroid</defName>
+		<label>make muckraker crab droid</label>
+		<description>Make a muckraker crab droid.</description>
+		<jobString>Making muckraker crab droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>120</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>6</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_BattleDroids</researchPrerequisite>
+		<pawnKind>OuterRim_MuckrakerDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/Muckraker/CrabDroid_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

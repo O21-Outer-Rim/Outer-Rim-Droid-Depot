@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<Asimov.PawnDef ParentName="OuterRim_BaseHumanoidDroid">
+		<defName>OuterRim_SuperBattleDroid</defName>
+		<label>B2 Super Battle Droid</label>
+		<description>An advanced battle droid model that is larger, tougher and generally better than the standard Battle Droid. Their advantages come at the cost of significantly more materials.</description>
+		<!-- Start of Asimov Data -->
+		<pawnSettings>
+			<!-- Body -->
+			<headTypeWhitelist>
+				<li>OuterRim_Head_BlankDroid</li>
+			</headTypeWhitelist>
+			<bodyTypeWhitelist>
+				<li>Male</li>
+			</bodyTypeWhitelist>
+		</pawnSettings>
+		<customGraphics>
+			<bodyPath>OuterRim/Droid/B2/Body/</bodyPath>
+			<shaderType>CutoutComplex</shaderType>
+			<skinColorPairs>
+				<li>
+					<!-- Default Factory Colours -->
+					<colorOne>(102, 112, 129)</colorOne>
+					<colorTwo>(102, 112, 129)</colorTwo>
+					<weight>100</weight>
+				</li>
+			</skinColorPairs>
+		</customGraphics>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>true</canUseRanged>
+				<canUseMelee>true</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enableAllWorkTypes>true</enableAllWorkTypes>
+				<skillSettings>
+					<li>
+						<skill>Shooting</skill>
+						<level>14</level>
+					</li>
+					<li>
+						<skill>Melee</skill>
+						<level>12</level>
+					</li>
+					<li>
+						<skill>Mining</skill>
+						<level>6</level>
+					</li>
+				</skillSettings>
+				<disabledNeeds>
+					<li>Mood</li>
+					<li>Food</li>
+					<li>Rest</li>
+					<li>Joy</li>
+					<li>Beauty</li>
+					<li>Comfort</li>
+					<li>Outdoors</li>
+					<li>Indoors</li>
+					<li>DrugDesire</li>
+					<li>RoomSize</li>
+				</disabledNeeds>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>true</channelTwo>
+			</li>
+		</comps>
+		<!-- End of Asimov Data -->
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MoveSpeed>4</MoveSpeed>
+			<!-- <MiningSpeed>1.3</MiningSpeed> -->
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<race>
+			<nameGenerator>OuterRim_Namer_DroidGeneric</nameGenerator>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1.0</baseHealthScale>
+		</race>
+		<butcherProducts>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+			<OuterRim_Durasteel>55</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>3</OuterRim_ComponentHypertech>
+		</butcherProducts>
+		<researchPrerequisites>
+			<li>OuterRim_BattleDroids</li>
+		</researchPrerequisites>
+	</Asimov.PawnDef>
+
+	<PawnKindDef>
+		<defName>OuterRim_SuperBattleDroid</defName>
+		<label>B2 Super Battle Droid</label>
+		<race>OuterRim_SuperBattleDroid</race>
+		<combatPower>40</combatPower>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>OuterRimDroidBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="false" />
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>0~0</apparelMoney>
+		<techHediffsChance>0.0</techHediffsChance>
+		<techHediffsMoney>0~0</techHediffsMoney>
+		<techHediffsTags Inherit="false" />
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_PawnKindExtended">
+				<clearApparel>True</clearApparel>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeSuperBattleDroid</defName>
+		<label>make super battle droid</label>
+		<description>Make a super battle droid.</description>
+		<jobString>Making super battle droid.</jobString>
+		<workAmount>15000</workAmount>
+		<costList>
+			<OuterRim_Durasteel>220</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>12</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_BattleDroids</researchPrerequisite>
+		<pawnKind>OuterRim_SuperBattleDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/B2/Body/Naked_Male_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

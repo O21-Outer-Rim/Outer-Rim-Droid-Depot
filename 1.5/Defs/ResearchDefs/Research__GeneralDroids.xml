@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Outer Rim Droids Research-->
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidEngineering</defName>
+		<label>Droid Engineering</label>
+		<description>Provides access to the crafting of Outer Rim droids and items for them.</description>
+    	<baseCost>3200</baseCost>
+		<prerequisites>
+			<li>OuterRim_HypertechFabrication</li>
+		</prerequisites>
+		<researchViewX>5</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidReplacementParts</defName>
+		<label>Replacement Parts</label>
+		<description>Unlocks the crafting of baseline replacement parts for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidReplacementPartsOver</defName>
+		<label>Overclocked Parts</label>
+		<description>Unlocks the crafting of overclocked replacement parts for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidReplacementParts</li>
+		</prerequisites>
+		<researchViewX>7</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidReplacementPartsAdv</defName>
+		<label>Advanced Parts</label>
+		<description>Unlocks the crafting of advanced replacement parts for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidReplacementPartsOver</li>
+		</prerequisites>
+		<researchViewX>8</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidEnergySys</defName>
+		<label>Energy Systems</label>
+		<description>Unlocks the crafting of various energy modules for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidWeaponSys</defName>
+		<label>Weapon Systems</label>
+		<description>Unlocks the crafting of various weapon modules for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<researchViewX>7</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_DroidAdvancedSys</defName>
+		<label>Advanced Systems</label>
+		<description>Unlocks the crafting of various shielding modules for droids.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<researchViewX>8</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Core Droids -->
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_AssassinDroids</defName>
+		<label>Assassin Droids</label>
+		<description>Unlocks crafting of assassin droids, highly skilled in ranged combat. They also have rudimentary social skills.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>6</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_AstromechDroids</defName>
+		<label>Astromech Droids</label>
+		<description>Unlocks crafting of astromech droids, they can typically perform repair, cleaning and hauling tasks, though their primary use is as a co-pilot in vehicles which have been designed to hold them.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>7</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_BattleDroids</defName>
+		<label>Battle Droids</label>
+		<description>Unlocks crafting of battle droids, designed specifically for combat and little else.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>8</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- <ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_ProbeDroids</defName>
+		<label>Probe Droids</label>
+		<description>Unlocks crafting of probe droids, these droids usually cannot perform any actual tasks and work best as cheap scouts you can send to a location and have self-destruct when you're done.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>6</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef> -->
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_MaintenanceDroids</defName>
+		<label>Maintenance Droids</label>
+		<description>Unlocks crafting of maintenance droids, these droids are typically capable of repair, hauling and cleaning tasks.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>7</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_MedicalDroids</defName>
+		<label>Medical Droids</label>
+		<description>Unlocks crafting of medical droids, often purely capable of medical tasks and nothing else.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>8</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_PowerDroids</defName>
+		<label>Power Droids</label>
+		<description>Unlocks crafting of Power Droid models, these droids are typically designed to function as portable fusion reactors.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>6</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_ProtocolDroids</defName>
+		<label>Protocol Droids</label>
+		<description>Unlocks crafting of protocol droid models, typically designed for use as communication intermediaries and servants.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>7</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_LaborDroids</defName>
+		<label>Labor Droids</label>
+		<description>Unlocks crafting of labor droids, usually designed to be capable of construction, mining and other labor intensive jobs.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>8</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="OuterRim_ResearchBaseMain">
+		<defName>OuterRim_SecurityDroids</defName>
+		<label>Security Droids</label>
+		<description>Unlocks crafting of security droids, capable of at least basic combat and some rudimentary social skills allowing them to function as a warden.</description>
+    	<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</prerequisites>
+		<techLevel>Ultra</techLevel>
+		<researchViewX>6</researchViewX>
+		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

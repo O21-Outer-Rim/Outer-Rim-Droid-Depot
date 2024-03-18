@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Droid Upgrades -->
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts</defName>
+		<label>Droid Parts</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts_Armor</defName>
+		<label>Armor</label>
+		<parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts_Brain</defName>
+		<label>Processor</label>
+		<parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts_Equipment</defName>
+		<label>Equipment</label>
+		<parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts_Weapons</defName>
+		<label>Weapons</label>
+		<parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>OuterRim_DroidParts_Decor</defName>
+		<label>Decorative</label>
+		<parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+  
+	<ThingCategoryDef>
+	  <defName>OuterRim_SkillDatadisks</defName>
+	  <label>Skill Datadisks</label>
+	  <parent>OuterRim_DroidParts</parent>
+	</ThingCategoryDef>
+
+	<!-- Droid Corpses -->
+
+	<ThingCategoryDef>
+		<defName>CorpsesDroid</defName>
+		<label>Droid Corpses</label>
+		<parent>Corpses</parent>
+	</ThingCategoryDef>
+
+</Defs>

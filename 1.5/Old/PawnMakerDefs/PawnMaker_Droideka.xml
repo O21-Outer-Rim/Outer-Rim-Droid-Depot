@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef>
+        <defName>OuterRim_PM_DestroyerDroid</defName>
+        <label>destroyer droid</label>
+        <description>Creates a Destroyer Droid.</description>
+        <thingClass>Building</thingClass>
+
+        <graphicData>
+            <texPath>Things/Alpha</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Flammability>0.1</Flammability>
+        </statBases>
+
+        <comps>
+			<li Class="O21Toolbox.CompProperties_PawnSpawner">
+				<pawnKind>OuterRim_DestroyerDroid</pawnKind>
+				<newborn>true</newborn>
+                <purgeTraits>True</purgeTraits>
+                <canGeneratePawnRelations>True</canGeneratePawnRelations>
+			</li>
+        </comps>
+
+        <size>(1,1)</size>
+        <category>Building</category>
+        <pathCost>200</pathCost>
+        <passability>Standable</passability>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <filthLeaving>Filth_RubbleRock</filthLeaving>
+        <hasInteractionCell>false</hasInteractionCell>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <altitudeLayer>Building</altitudeLayer>
+        <repairEffect>Repair</repairEffect>
+        <useHitPoints>True</useHitPoints>
+        <selectable>true</selectable>
+        <surfaceType>Item</surfaceType>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+
+	<O21Toolbox.AutomatedProducer.RecipeDef_Automated>
+		<defName>OuterRim_CreateDestroyerDroid</defName>
+      	<label>create destroyer droid</label>
+      	<description>Create a Destroyer Droid, includes no items or module upgrades.</description>
+		<randomTickCost>false</randomTickCost>
+		<baseTickCost>60000</baseTickCost>
+		<costs>
+			<OuterRim_Durasteel>220</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>15</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costs>
+		<products>
+			<OuterRim_PM_DestroyerDroid>1</OuterRim_PM_DestroyerDroid>
+		</products>
+		<requiredResearch>OuterRim_BattleDroids</requiredResearch>
+		<recipeInfo>
+			<recipeType>Droid Assembly</recipeType>
+			<recipeIcon>UI/Toolbox/RecipeIcon_Manufacturing</recipeIcon>
+			<productionString>Assembling: </productionString>
+		</recipeInfo>
+	</O21Toolbox.AutomatedProducer.RecipeDef_Automated>
+
+	<PawnKindDef>
+		<defName>OuterRim_DestroyerDroid</defName>
+		<label>Destroyer Droid</label>
+		<race>OuterRim_DestroyerDroid</race>
+		<combatPower>40</combatPower>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>DestroyerDroidBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="false" />
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>0~0</apparelMoney>
+		<techHediffsChance>0.0</techHediffsChance>
+		<techHediffsMoney>0~0</techHediffsMoney>
+		<techHediffsTags Inherit="false" />
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_PawnKindExtended">
+				<clearApparel>True</clearApparel>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+</Defs>

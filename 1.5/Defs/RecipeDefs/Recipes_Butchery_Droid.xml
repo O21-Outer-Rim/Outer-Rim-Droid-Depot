@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<RecipeDef Name="OuterRim_DroidDisassemblyRecipe">
+		<defName>OuterRim_ButcherCorpseDroid</defName>
+		<label>disassemble droid</label>
+		<description>Disassemble a dead droid into its component parts.</description>
+		<jobString>Disassembling droid.</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>ButcheryMechanoidSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<efficiencyStat>ButcheryMechanoidEfficiency</efficiencyStat>
+		<effectWorking>ButcherMechanoid</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<specialFiltersToAllow>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
+			<thingDefs>
+				<li>Corpse_OuterRim_BattleDroid</li>
+				<li>Corpse_OuterRim_CommandoDroid</li>
+				<li>Corpse_OuterRim_DestroyerDroid</li>
+				<li>Corpse_OuterRim_MagnaGuardDroid</li>
+				<li>Corpse_OuterRim_SuperBattleDroid</li>
+				<li>Corpse_OuterRim_SuperTacticalDroid</li>
+				<li>Corpse_OuterRim_TacticalDroid</li>
+				<li>Corpse_OuterRim_HKDroid</li>
+				<li>Corpse_OuterRim_KXSecurityDroid</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+</Defs>

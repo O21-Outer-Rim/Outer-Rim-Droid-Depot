@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyDef>
+		<defName>OuterRim_QuadWheeledDroid</defName>
+		<label>quad wheeled droid</label>
+		<corePart>
+			<def>OuterRim_DroidThorax</def>
+			<customLabel>chassis</customLabel>
+			<height>Middle</height>
+			<depth>Outside</depth>
+            <groups>
+				<li>FullHead</li>
+				<li>HeadAttackTool</li>
+                <li>Torso</li>
+            </groups>
+			<parts>
+				<li>
+					<def>OuterRim_DroidArm</def>
+					<customLabel>arm</customLabel>
+					<coverage>0.2</coverage>
+					<groups>
+						<li>Arms</li>
+					</groups>
+					<parts>
+						<li>
+							<def>OuterRim_DroidHand</def>
+							<customLabel>arm gimbal</customLabel>
+							<coverage>0.2</coverage>
+							<height>Bottom</height>
+							<groups>
+								<li>Hands</li>
+							</groups>
+							<parts>
+								<li>
+									<def>OuterRim_DroidFinger</def>
+									<customLabel>manipulation clamp</customLabel>
+									<coverage>0.15</coverage>
+									<groups>
+										<li>Hands</li>
+									</groups>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>OuterRim_DroidBrain</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidSightSensor</def>
+					<customLabel>left sight sensor</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>FullHead</li>
+						<li>Eyes</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidSightSensor</def>
+					<customLabel>right sight sensor</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>FullHead</li>
+						<li>Eyes</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidSoundSensor</def>
+					<customLabel>left sound sensor</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidSoundSensor</def>
+					<customLabel>right sound sensor</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidLeg</def>
+					<customLabel>rear axle</customLabel>
+					<coverage>0.15</coverage>
+					<height>Bottom</height>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+					<parts>
+						<li>
+							<def>OuterRim_DroidFoot</def>
+							<customLabel>rear right wheel</customLabel>
+							<coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+						</li>
+						<li>
+							<def>OuterRim_DroidFoot</def>
+							<customLabel>rear left wheel</customLabel>
+							<coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>OuterRim_DroidLeg</def>
+					<customLabel>front axle</customLabel>
+					<coverage>0.15</coverage>
+					<height>Bottom</height>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+					<parts>
+						<li>
+							<def>OuterRim_DroidFoot</def>
+							<customLabel>front right wheel</customLabel>
+							<coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+						</li>
+						<li>
+							<def>OuterRim_DroidFoot</def>
+							<customLabel>front left wheel</customLabel>
+							<coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>OuterRim_DroidReactor</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidFluidReprocessor</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+				</li>
+				<li>
+					<def>OuterRim_DroidFluidReprocessor</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+</Defs>

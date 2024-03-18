@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DroidApparelCraftableBase">
+		<defName>OuterRim_DroidWeapon_WristRocket</defName>
+		<label>wrist rocket</label>
+		<description>A droid wrist rocket, typically found on B2 Super Battle Droids but not uncommon on other models when they've been modified.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidFunctionModule</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<costList Inherit="False">
+			<OuterRim_Durasteel>25</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>OuterRim_DroidWeaponSys</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.3</Flammability>
+			<EquipDelay>6</EquipDelay>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.46</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel Inherit="False">
+			<tags>
+				<li>DroidWeapon</li>
+			</tags>
+			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>MiddleExtra</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<label>WristBlaster</label>
+				<defaultProjectile>OuterRim_Bullet_WristRocket</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>32</range>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>15</muzzleFlashScale>
+				<forcedMissRadius>1.1</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<targetParams>
+				  <canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbGiver">
+				<verbProps>
+					<li>
+						<label>WristBlaster</label>
+						<visualLabel>wrist rocket</visualLabel>
+						<description>Wrist mounted rocket.</description>
+						<draw>false</draw>
+						<canFireIndependently>false</canFireIndependently>
+						<canBeToggled>true</canBeToggled>
+						<humanAsDefault>true</humanAsDefault>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>OuterRim_Bullet_WristRocket</defName>
+		<label>rocket</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Rocket_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<explosionRadius>1.9</explosionRadius>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HeadTypeDef Name="OuterRimDroidHeadBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<hairMeshSize>(1.5, 1.5)</hairMeshSize>
+		<beardMeshSize>(1.5, 1.5)</beardMeshSize>
+		<modExtensions>
+			<li MayRequire="Neronix17.UI.PawnAdjuster" Class="PawnAdjust.DefModExt_HideInAdjuster" />
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_HKDroid</defName>
+		<graphicPath>OuterRim/Droid/HK/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_BattleDroid</defName>
+		<graphicPath>OuterRim/Droid/B1/Head/Head</graphicPath>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_BattleDroidAdvanced</defName>
+		<graphicPath>OuterRim/Droid/B1A/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_BlankDroid</defName>
+		<graphicPath>OuterRim/Droid/Blank/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_CommandoDroid</defName>
+		<graphicPath>OuterRim/Droid/BX/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_TacticalDroid</defName>
+		<graphicPath>OuterRim/Droid/Tactical/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_SuperTacticalDroid</defName>
+		<graphicPath>OuterRim/Droid/SuperTactical/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_KXSeriesDroid</defName>
+		<graphicPath>OuterRim/Droid/KX/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+				<shaderType>CutoutComplex</shaderType>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_MagnaGuardDroid</defName>
+		<graphicPath>OuterRim/Droid/Magnaguard/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_ProtocolDroid</defName>
+		<graphicPath>OuterRim/Droid/Protocol/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+				<shaderType>CutoutComplex</shaderType>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="OuterRimDroidHeadBase">
+		<defName>OuterRim_Head_ImperialLaborDroid</defName>
+		<graphicPath>OuterRim/Droid/ImperialLabor/Head/Head</graphicPath>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_HeadTypeStuff">
+				<useSkinShader>false</useSkinShader>
+				<shaderType>CutoutComplex</shaderType>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+</Defs>

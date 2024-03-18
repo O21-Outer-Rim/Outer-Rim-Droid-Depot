@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseAnimalDroid">
+		<defName>OuterRim_SalvageAssistDroid</defName>
+		<label>salvage assist droid</label>
+		<description>A groundmech salvage assist droid, cheap to produce but not capable of much beyond hauling and cleaning.</description>
+		<statBases>
+			<MoveSpeed>5.3</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>OuterRim_QuadWheeledDroid</body>
+			<baseBodySize>0.5</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>OuterRim_Droid_MSE_Wounded</soundWounded>
+					<soundDeath>OuterRim_Droid_MSE_Death</soundDeath>
+					<soundCall>OuterRim_Droid_MSE_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Automaton">
+				<canUseRanged>false</canUseRanged>
+				<canUseMelee>false</canUseMelee>
+				<corpseEdible>false</corpseEdible>
+				<corpseRots>false</corpseRots>
+				<affectedByEMP>true</affectedByEMP>
+				<immuneToDisease>true</immuneToDisease>
+				<huntTarget>true</huntTarget>
+				<clearPassions>true</clearPassions>
+				<flattenSkills>true</flattenSkills>
+				<skillGainMulti>0.2</skillGainMulti>
+				<skillLossMulti>0</skillLossMulti>
+				<defaultSkillLevel>0</defaultSkillLevel>
+				<enabledWorkTypes>
+					<li>Hauling</li>
+					<li>Cleaning</li>
+				</enabledWorkTypes>
+			</li>
+			<li Class="Asimov.CompProperties_RecolourablePawn">
+				<channelOne>true</channelOne>
+				<channelTwo>false</channelTwo>
+				<skinColorPairs>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(166, 82, 76)</colorOne>
+						<colorTwo>(166, 82, 76)</colorTwo>
+						<weight>100</weight>
+					</li>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(173, 133, 76)</colorOne>
+						<colorTwo>(173, 133, 76)</colorTwo>
+						<weight>100</weight>
+					</li>
+					<li>
+						<!-- Default Factory Colours -->
+						<colorOne>(81, 125, 153)</colorOne>
+						<colorTwo>(81, 125, 153)</colorTwo>
+						<weight>100</weight>
+					</li>
+				</skinColorPairs>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>OuterRim_MaintenanceDroids</li>
+		</researchPrerequisites>
+		<butcherProducts Inherit="False">
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+			<OuterRim_Durasteel>10</OuterRim_Durasteel>
+		</butcherProducts>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AsimovAutomatonKindBase">
+		<defName>OuterRim_SalvageAssistDroid</defName>
+		<label>salvage assist droid</label>
+		<race>OuterRim_SalvageAssistDroid</race>
+		<combatPower>99999</combatPower>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>OuterRim/Droid/SalvageAssist</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef ParentName="AsimovAutomatonRecipeBase">
+		<defName>OuterRim_MakeSalvageAssistDroid</defName>
+		<label>make salvage assist droid</label>
+		<description>Make a salvage assist droid.</description>
+		<jobString>Making salvage assist droid.</jobString>
+		<workAmount>7500</workAmount>
+		<costList>
+			<OuterRim_Durasteel>40</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>2</OuterRim_ComponentHypertech>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+		</costList>
+		<researchPrerequisite>OuterRim_MaintenanceDroids</researchPrerequisite>
+		<pawnKind>OuterRim_SalvageAssistDroid</pawnKind>
+		<recipeIcon>OuterRim/Droid/SalvageAssist_south</recipeIcon>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

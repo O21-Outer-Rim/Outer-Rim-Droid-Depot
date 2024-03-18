@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="OuterRim_BaseHumanoidDroid">
+		<defName>OuterRim_CommandoDroid</defName>
+		<label>BX Commando Droid</label>
+		<description>A stealthy model of battle droid capable of much more flexible movement, even imitating humanoids to a degree along with a high melee proficiency which the standard models lack almost entirely. They are much more difficult to produce.</description>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<aliencrowntypes>
+						<li>Head</li>
+					</aliencrowntypes>
+					<alienbodytypes>
+						<li>Male</li>
+					</alienbodytypes>
+                    <colorChannels>
+                        <li>
+                            <name>skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>20</weight>
+                                        <only>RGB(99, 96, 90)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+			<graphicPaths>
+				<li>
+					<head>OuterRim/Droid/BX/Head/</head>
+					<body>OuterRim/Droid/BX/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MoveSpeed>5.4</MoveSpeed>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<nameGenerator>OuterRim_Namer_DroidGeneric</nameGenerator>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>0.8</baseHealthScale>
+		</race>
+		<butcherProducts>
+			<OuterRim_DroidBrain>1</OuterRim_DroidBrain>
+			<OuterRim_Durasteel>30</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>3</OuterRim_ComponentHypertech>
+		</butcherProducts>
+	</AlienRace.ThingDef_AlienRace>
+	
+</Defs>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DroidApparelCraftableBase">
+		<defName>OuterRim_DroidPropulsionJets</defName>
+		<label>droid propulsion jets</label>
+		<description>A set of jets designed to allow droids to fly a short distance, including over things they otherwise wouldn't be able to pass.</description>
+		<techLevel>Ultra</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<researchPrerequisite>OuterRim_DroidAdvancedSys</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidFunctionModule</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.3</Flammability>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-1.3</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>OuterRim_DroidParts_Equipment</li>
+		</thingCategories>
+		<costList>
+			<OuterRim_Durasteel>180</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>6</OuterRim_ComponentHypertech>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>DroidJetpack</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<comps>
+			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>OuterRim_DroidJetpackJump</li>
+				</abilities>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="OuterRimJetpackAbilityBase">
+		<defName>OuterRim_DroidJetpackJump</defName>
+		<iconPath>OuterRim/Items/DroidFunctionModule</iconPath>
+	</VFECore.Abilities.AbilityDef>
+
+</Defs>

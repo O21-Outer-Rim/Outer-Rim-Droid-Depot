@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Shielding: General -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidDamageShielding_Advanced</defName>
+		<label>droid damage shielding (advanced)</label>
+		<description>A droid shielding module that reduces all incoming damage.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallDroidDamageShielding_Advanced</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>OuterRim_DroidAdvancedSys</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>OuterRim_DroidDamageShielding_Advanced</defName>
+		<label>droid damage shielding (advanced)</label>
+		<description>A droid shielding module that reduces all incoming damage.</description>
+    	<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<priceImpact>false</priceImpact>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>OuterRim_DroidDamageShielding_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallImplantBase">
+		<defName>OuterRim_Droid_InstallDroidDamageShielding_Advanced</defName>
+		<label>install droid damage shielding (advanced)</label>
+		<description>Install droid damage shielding (advanced).</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidDamageShielding_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid shielding.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidDamageShielding_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidDamageShielding_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Waist</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidDamageShielding_Advanced</addsHediff>
+	</RecipeDef>
+
+
+</Defs>
