@@ -4,6 +4,7 @@
 	<description>Outer Rim module adding droids and droid related items, buildings and more. This module will also add droids to various other modules if they are both active.</description>
 	<author>Neronix17</author>
 	<packageId>Neronix17.OuterRim.DroidDepot</packageId>
+	<modIconPath IgnoreIfNoMatchingField="True">OuterRim/ModIcon</modIconPath>
 	<url>https://www.patreon.com/neronix17</url>
 	<supportedVersions>
 		<li>1.4</li>
