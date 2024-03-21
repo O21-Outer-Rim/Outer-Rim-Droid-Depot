@@ -62,10 +62,10 @@ namespace OuterRimDroids
 			{
 				partsLeft = 0f;
 			}
-			IEnumerable<Hediff_Injury> injuriesTendable = pawn.health.hediffSet.GetInjuriesTendable();
+			IEnumerable<Hediff> injuriesTendable = pawn.health.hediffSet.GetHediffsTendable();
 			if (injuriesTendable != null)
 			{
-				Hediff_Injury[] array = injuriesTendable.ToArray();
+				Hediff[] array = injuriesTendable.ToArray();
 				if (array.Any())
 				{
                     for (int i = 0; i < array.Length; i++)
@@ -105,7 +105,7 @@ namespace OuterRimDroids
 			if (pawn.Dead)
 			{
 				LogUtil.LogError("The pawn has died while being repaired, resurrecting. Shouldn't happen but you never know with this game.");
-				ResurrectionUtility.Resurrect(pawn);
+				ResurrectionUtility.TryResurrect(pawn);
 			}
 		}
 
@@ -129,7 +129,7 @@ namespace OuterRimDroids
 			{
 				partsLeft = 0f;
 			}
-			ResurrectionUtility.Resurrect(pawn);
+			ResurrectionUtility.TryResurrect(pawn);
 			BodyPartRecord brain = pawn.health.hediffSet.GetBrain();
 			if (Rand.Chance(partsLeft))
 			{
@@ -156,7 +156,7 @@ namespace OuterRimDroids
 			if (pawn.Dead)
 			{
 				LogUtil.LogError("The pawn has died while being resurrected.");
-				ResurrectionUtility.Resurrect(pawn);
+				ResurrectionUtility.TryResurrect(pawn);
 			}
 		}
 	}

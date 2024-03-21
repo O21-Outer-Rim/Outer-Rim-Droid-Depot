@@ -28,19 +28,17 @@ namespace OuterRimDroids
 			}
 		}
 
-		public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
 		{
 			if (p.skills == null)
 			{
-				failReason = null;
 				return false;
 			}
 			if (p.skills.GetSkill(Skill).TotallyDisabled)
 			{
-				failReason = "SkillDisabled".Translate();
-				return false;
+				return "SkillDisabled".Translate();
 			}
-			return base.CanBeUsedBy(p, out failReason);
+			return base.CanBeUsedBy(p);
 		}
 	}
 }

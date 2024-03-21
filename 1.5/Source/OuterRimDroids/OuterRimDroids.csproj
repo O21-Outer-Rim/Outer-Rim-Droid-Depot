@@ -39,15 +39,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Asimov">
-      <HintPath>..\..\..\..\..\_Libraries\Asimov\1.4\Assemblies\Asimov.dll</HintPath>
+      <HintPath>..\..\..\..\..\_Libraries\Asimov\1.5\Assemblies\Asimov.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp_public_1.4">
-      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp_public_1.4.dll</HintPath>
+    <Reference Include="Assembly-CSharp_public_1.5">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp_public_1.5.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,7 +59,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TabulaRasa">
-      <HintPath>..\..\..\..\..\_Libraries\Tabula Rasa\1.4\Assemblies\TabulaRasa.dll</HintPath>
+      <HintPath>..\..\..\..\..\_Libraries\Tabula Rasa\1.5\Assemblies\TabulaRasa.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">

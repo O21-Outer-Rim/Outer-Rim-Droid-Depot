@@ -17,12 +17,11 @@ namespace OuterRimDroids
     public static class Patch_CompUseEffect_LearnSkill_CanBeUsedBy
     {
         [HarmonyPostfix]
-        public static void Postfix(ref bool __result, Pawn p, string failReason)
+        public static void Postfix(ref AcceptanceReport __result, Pawn p)
         {
             if (p.def.HasModExtension<DefModExt_Droid>())
             {
-                failReason = "OuterRimDroids.DroidsCannotUse";
-                __result = false;
+                __result = "OuterRimDroids.DroidsCannotUse".Translate();
                 return;
             }
         }

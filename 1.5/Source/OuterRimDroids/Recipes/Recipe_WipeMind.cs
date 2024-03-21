@@ -80,16 +80,16 @@ namespace OuterRimDroids
                         pawn.skills.skills[i].Level = 0;
                     }
                     // Give Backstory Skills from Childhood.
-                    foreach (SkillDef skill in pawn.story.GetBackstory(BackstorySlot.Childhood).skillGains.Keys)
+                    foreach (SkillGain skill in pawn.story.GetBackstory(BackstorySlot.Childhood).skillGains)
                     {
-                        pawn.skills.skills.Find(ss => ss.def == skill).Level += pawn.story.GetBackstory(BackstorySlot.Childhood).skillGains.TryGetValue(skill);
+                        pawn.skills.skills.Find(ss => ss.def == skill.skill).Level += skill.amount;
                     }
                     // Give Backstory Skills from Adulthood.
                     if (pawn.story.GetBackstory(BackstorySlot.Adulthood) != null)
                     {
-                        foreach (SkillDef skill in pawn.story.GetBackstory(BackstorySlot.Adulthood).skillGains.Keys)
+                        foreach (SkillGain skill in pawn.story.GetBackstory(BackstorySlot.Adulthood).skillGains)
                         {
-                            pawn.skills.skills.Find(ss => ss.def == skill).Level += pawn.story.GetBackstory(BackstorySlot.Adulthood).skillGains.TryGetValue(skill);
+                            pawn.skills.skills.Find(ss => ss.def == skill.skill).Level += skill.amount;
                         }
                     }
                 }

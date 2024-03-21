@@ -41,12 +41,12 @@ namespace OuterRimDroids
 					{
 						continue;
 					}
-					IEnumerable<Hediff_Injury> injuriesTendable = pawn.health.hediffSet.GetInjuriesTendable();
+					IEnumerable<Hediff> injuriesTendable = pawn.health.hediffSet.GetHediffsTendable();
 					if (injuriesTendable == null)
 					{
 						continue;
 					}
-					Hediff_Injury[] array = injuriesTendable.ToArray();
+					Hediff[] array = injuriesTendable.ToArray();
 					if (!array.Any())
 					{
 						continue;

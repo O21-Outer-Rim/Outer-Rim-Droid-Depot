@@ -26,14 +26,13 @@ namespace OuterRimDroids
 			skill = skillDiskComp.skill;
 		}
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p, bool forced = false, bool ignoreReserveAndReachable = false)
         {
             if (p.def.HasModExtension<DefModExt_DroidEquipment>())
 			{
-				return base.CanBeUsedBy(p, out failReason);
+				return base.CanBeUsedBy(p, forced, ignoreReserveAndReachable);
 			}
-			failReason = "OuterRimDroids.CantEquipReasonNotDroid".Translate();
-			return false;
+			return "OuterRimDroids.CantEquipReasonNotDroid".Translate();
 		}
 
         public override string FloatMenuOptionLabel(Pawn pawn)
