@@ -50,6 +50,7 @@
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 		</statBases>
 		<race>
+			<renderTree>Asimov_Automaton</renderTree>
 			<fleshType>Asimov_Automaton</fleshType>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
