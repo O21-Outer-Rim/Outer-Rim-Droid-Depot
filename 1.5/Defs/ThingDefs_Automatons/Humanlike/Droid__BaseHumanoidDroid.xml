@@ -166,6 +166,13 @@
 				<timeBetweenTraits>180000~300000</timeBetweenTraits>
 			</li>
 			<li Class="Asimov.CompProperties_Hibernation" />
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>Stun</li>
+					<li>EMP</li>
+					<li>OuterRim_Ion</li>
+				</affectedDamageDefs>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="Asimov.DefModExt_EnergyNeed" />
