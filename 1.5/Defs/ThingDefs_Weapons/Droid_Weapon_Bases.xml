@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseHumanMakeableGun" Name="OuterRimBase_DroidWeapon" Abstract="True">
+		<techLevel>Ultra</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>4</Mass>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+			<researchPrerequisite>OuterRim_HeavyWeaponry</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<OuterRim_Durasteel>80</OuterRim_Durasteel>
+			<OuterRim_Tibanna>40</OuterRim_Tibanna>
+			<OuterRim_ComponentHypertech>6</OuterRim_ComponentHypertech>
+		</costList>
+		<weaponTags Inherit="False">
+			<li>ORDroidWeapon</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>OuterRim_DroidWeapon</li>
+		</tradeTags>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_InvisibleWeapon" />
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

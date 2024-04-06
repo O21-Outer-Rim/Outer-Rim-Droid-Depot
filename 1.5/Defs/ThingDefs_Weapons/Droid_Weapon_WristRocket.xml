@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="DroidApparelCraftableBase">
+	<ThingDef ParentName="OuterRimBase_DroidWeapon">
 		<defName>OuterRim_DroidWeapon_WristRocket</defName>
 		<label>wrist rocket</label>
 		<description>A droid wrist rocket, typically found on B2 Super Battle Droids but not uncommon on other models when they've been modified.</description>
-		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>OuterRim/Items/DroidFunctionModule</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costList Inherit="False">
 			<OuterRim_Durasteel>25</OuterRim_Durasteel>
@@ -22,45 +20,20 @@
 			<researchPrerequisite>OuterRim_DroidWeaponSys</researchPrerequisite>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>12000</WorkToMake>
-			<MaxHitPoints>300</MaxHitPoints>
-			<Mass>4</Mass>
-			<Flammability>0.3</Flammability>
-			<EquipDelay>6</EquipDelay>
 			<AccuracyTouch>0.68</AccuracyTouch>
 			<AccuracyShort>0.62</AccuracyShort>
 			<AccuracyMedium>0.46</AccuracyMedium>
 			<AccuracyLong>0.32</AccuracyLong>
-			<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.2</MoveSpeed>
 		</equippedStatOffsets>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<apparel Inherit="False">
-			<tags>
-				<li>DroidWeapon</li>
-			</tags>
-			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
-			<useWornGraphicMask>true</useWornGraphicMask>
-			<layers>
-				<li>MiddleExtra</li>
-			</layers>
-			<bodyPartGroups>
-				<li>Arms</li>
-			</bodyPartGroups>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-		</apparel>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
-				<label>WristBlaster</label>
 				<defaultProjectile>OuterRim_Bullet_WristRocket</defaultProjectile>
-				<warmupTime>0</warmupTime>
+				<warmupTime>2.0</warmupTime>
 				<range>32</range>
 				<soundCast>InfernoCannon_Fire</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -72,21 +45,9 @@
 				</targetParams>
 			</li>
 		</verbs>
-		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbGiver">
-				<verbProps>
-					<li>
-						<label>WristBlaster</label>
-						<visualLabel>wrist rocket</visualLabel>
-						<description>Wrist mounted rocket.</description>
-						<draw>false</draw>
-						<canFireIndependently>false</canFireIndependently>
-						<canBeToggled>true</canBeToggled>
-						<humanAsDefault>true</humanAsDefault>
-					</li>
-				</verbProps>
-			</li>
-		</comps>
+		<weaponTags>
+			<li>ORDroidWeapon_WristRocket</li>
+		</weaponTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
