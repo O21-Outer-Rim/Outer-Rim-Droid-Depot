@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\Targetable\Comp_TargetEffect_Restrain.cs" />
+    <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
     <Compile Include="Jobs\JobDriver_RestrainDroid.cs" />
     <Compile Include="Utilities\ApparelUtil.cs" />
     <Compile Include="Utilities\CachedUtil.cs" />

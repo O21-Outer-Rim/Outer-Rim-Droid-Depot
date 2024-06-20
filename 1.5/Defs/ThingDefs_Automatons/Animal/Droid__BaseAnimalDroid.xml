@@ -90,23 +90,22 @@
 		<modExtensions>
 			<li Class="OuterRimDroids.DefModExt_Droid" />
 			<li Class="OuterRimDroids.DefModExt_DroidEquipment" />
-			<li Class="Asimov.DefModExt_AutomatonApparel">
+			<!-- <li Class="Asimov.DefModExt_AutomatonApparel">
 				<apparelWhitelist>
-					<!-- ========== Armour ========== -->
 					<li>OuterRim_DroidArmorLight</li>
 					<li>OuterRim_DroidArmorModule</li>
 					<li>OuterRim_DroidArmorHeavy</li>
-					<!-- ========== Weapons ========== -->
+					
 					<li>OuterRim_DroidWeapon_BlasterCannon</li>
 					<li>OuterRim_DroidWeapon_TwinWristBlaster</li>
 					<li>OuterRim_DroidWeapon_WristBlasterIon</li>
 					<li>OuterRim_DroidWeapon_WristBlaster</li>
 					<li>OuterRim_DroidWeapon_WristRocket</li>
-					<!-- ========== Other ========== -->
+					
 					<li>OuterRim_DroidDeflectorShield</li>
 					<li>OuterRim_DroidPropulsionJets</li>
 				</apparelWhitelist>
-			</li>
+			</li> -->
 		</modExtensions>
 		<!-- Butcher Products should be set to 1/4th the costs -->
 		<butcherProducts>

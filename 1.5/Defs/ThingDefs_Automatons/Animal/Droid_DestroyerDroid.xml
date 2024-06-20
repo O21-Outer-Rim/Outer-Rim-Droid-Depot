@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseAnimalDroid">
 		<defName>OuterRim_DestroyerDroid</defName>
 		<label>Destroyer Droid</label>
-		<description>Manufactured by the Colicoids on Colla IV, droidekas were dangerous and deadly, designed to exterminate their adversaries with extreme prejudice. They are configured with a deflector shield built in.</description>
+		<description>Manufactured by the Colicoids on Colla IV, droidekas were dangerous and deadly, designed to exterminate their adversaries with extreme prejudice.</description>
 		<statBases>
 			<MoveSpeed>4.2</MoveSpeed>
 			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>

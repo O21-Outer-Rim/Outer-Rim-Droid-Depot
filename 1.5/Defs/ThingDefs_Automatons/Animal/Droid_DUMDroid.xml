@@ -131,7 +131,7 @@
 				<bodyGraphicData>
 					<texPath>OuterRim/Droid/DUM</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1</drawSize>
+					<drawSize>0.7</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.4, 0.3)</volume>
 					</shadowData>
