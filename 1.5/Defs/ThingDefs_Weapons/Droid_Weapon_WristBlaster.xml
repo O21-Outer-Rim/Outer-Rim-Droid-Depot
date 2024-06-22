@@ -29,6 +29,7 @@
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>OuterRim_Bullet_WristBlaster</defaultProjectile>
 				<warmupTime>0.2</warmupTime>
 				<range>26</range>

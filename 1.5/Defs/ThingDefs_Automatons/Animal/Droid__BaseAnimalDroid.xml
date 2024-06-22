@@ -85,6 +85,8 @@
 			
 			<!-- Important Utility -->
 			<li>OuterRim_ShutDownDroid</li>
+			<li>OuterRim_AttachRestraintBolt</li>
+			<li>OuterRim_RemoveRestraintBolt</li>
 			<li>RemoveBodyPart</li>
 		</recipes>
 		<modExtensions>

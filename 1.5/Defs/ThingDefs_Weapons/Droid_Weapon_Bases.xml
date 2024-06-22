@@ -8,7 +8,7 @@
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<statBases>
-			<WorkToMake>30000</WorkToMake>
+			<WorkToMake>10000</WorkToMake>
 			<Mass>4</Mass>
 		</statBases>
 		<recipeMaker>
