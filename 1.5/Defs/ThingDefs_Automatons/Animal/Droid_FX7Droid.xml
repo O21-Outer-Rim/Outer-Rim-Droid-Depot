@@ -91,7 +91,7 @@
 				<bodyGraphicData>
 					<texPath>OuterRim/Droid/FX7</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>(1.8, 1.8)</drawSize>
+					<drawSize>(1.4, 1.4)</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.4, 0.3)</volume>
 					</shadowData>
