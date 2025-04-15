@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<BodyDef>
@@ -8,24 +8,24 @@
 			<def>OuterRim_DroidThorax</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
-            <groups>
-                <li>Torso</li>
-            </groups>
+			<groups>
+				<li>Torso</li>
+			</groups>
 			<parts>
 				<li>
 					<def>OuterRim_DroidNeck</def>
 					<coverage>0.10</coverage>
 					<height>Top</height>
-                    <groups>
-                        <li>Neck</li>
-                    </groups>
+					<groups>
+						<li>Neck</li>
+					</groups>
 					<parts>
 						<li>
 							<def>Head</def>
 							<coverage>0.80</coverage>
 							<groups>
-                                <li>UpperHead</li>
-                                <li>FullHead</li>
+								<li>UpperHead</li>
+								<li>FullHead</li>
 								<li>HeadAttackTool</li>
 							</groups>
 							<parts>
@@ -33,54 +33,54 @@
 									<def>OuterRim_DroidBrain</def>
 									<coverage>0.10</coverage>
 									<depth>Inside</depth>
-                                    <groups>
-                                        <li>UpperHead</li>
-                                        <li>FullHead</li>
-                                    </groups>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
 								</li>
 								<li>
 									<def>OuterRim_DroidSightSensor</def>
 									<customLabel>left sight sensor</customLabel>
 									<coverage>0.13</coverage>
-                                    <groups>
-                                        <li>FullHead</li>
-                                        <li>Eyes</li>
-                                    </groups>
+									<groups>
+										<li>FullHead</li>
+										<li>Eyes</li>
+									</groups>
 								</li>
 								<li>
 									<def>OuterRim_DroidSightSensor</def>
 									<customLabel>right sight sensor</customLabel>
 									<coverage>0.13</coverage>
-                                    <groups>
-                                        <li>FullHead</li>
-                                        <li>Eyes</li>
-                                    </groups>
+									<groups>
+										<li>FullHead</li>
+										<li>Eyes</li>
+									</groups>
 								</li>
 								<li>
 									<def>OuterRim_DroidSoundSensor</def>
 									<customLabel>left sound sensor</customLabel>
 									<coverage>0.10</coverage>
-                                    <groups>
-                                        <li>UpperHead</li>
-                                        <li>FullHead</li>
-                                    </groups>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
 								</li>
 								<li>
 									<def>OuterRim_DroidSoundSensor</def>
 									<customLabel>right sound sensor</customLabel>
 									<coverage>0.10</coverage>
-                                    <groups>
-                                        <li>UpperHead</li>
-                                        <li>FullHead</li>
-                                    </groups>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
 								</li>
 								<li>
 									<def>OuterRim_DroidSmellSensor</def>
 									<coverage>0.10</coverage>
-                                    <groups>
-                                        <li>Teeth</li>
-                                        <li>FullHead</li>
-                                    </groups>
+									<groups>
+										<li>Teeth</li>
+										<li>FullHead</li>
+									</groups>
 								</li>
 							</parts>
 						</li>
@@ -116,7 +116,7 @@
 											<customLabel>left pinky</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>LeftHand</li>
 											</groups>
 										</li>
@@ -125,7 +125,7 @@
 											<customLabel>left middle finger</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>LeftHand</li>
 												<li>MiddleFingers</li>
 											</groups>
@@ -135,7 +135,7 @@
 											<customLabel>left index finger</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>LeftHand</li>
 											</groups>
 										</li>
@@ -144,7 +144,7 @@
 											<customLabel>left thumb</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>LeftHand</li>
 											</groups>
 										</li>
@@ -184,7 +184,7 @@
 											<customLabel>right pinky</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>RightHand</li>
 											</groups>
 										</li>
@@ -193,7 +193,7 @@
 											<customLabel>right middle finger</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>RightHand</li>
 												<li>MiddleFingers</li>
 											</groups>
@@ -203,7 +203,7 @@
 											<customLabel>right index finger</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>RightHand</li>
 											</groups>
 										</li>
@@ -212,7 +212,7 @@
 											<customLabel>right thumb</customLabel>
 											<coverage>0.15</coverage>
 											<groups>
-                                                <li>Hands</li>
+												<li>Hands</li>
 												<li>RightHand</li>
 											</groups>
 										</li>
@@ -235,17 +235,17 @@
 					<customLabel>left leg</customLabel>
 					<coverage>0.2</coverage>
 					<height>Bottom</height>
-                    <groups>
-                        <li>Legs</li>
-                    </groups>
+					<groups>
+						<li>Legs</li>
+					</groups>
 					<parts>
 						<li>
 							<def>OuterRim_DroidFoot</def>
 							<customLabel>left foot</customLabel>
-							<coverage>0.2</coverage>          
-                            <groups>
-                                <li>Feet</li>
-                            </groups>
+							<coverage>0.2</coverage>
+							<groups>
+								<li>Feet</li>
+							</groups>
 						</li>
 					</parts>
 				</li>
@@ -254,17 +254,17 @@
 					<customLabel>right leg</customLabel>
 					<coverage>0.2</coverage>
 					<height>Bottom</height>
-                    <groups>
-                        <li>Legs</li>
-                    </groups>
+					<groups>
+						<li>Legs</li>
+					</groups>
 					<parts>
 						<li>
 							<def>OuterRim_DroidFoot</def>
 							<customLabel>right foot</customLabel>
 							<coverage>0.2</coverage>
-                            <groups>
-                                <li>Feet</li>
-                            </groups>
+							<groups>
+								<li>Feet</li>
+							</groups>
 						</li>
 					</parts>
 				</li>
@@ -278,6 +278,7 @@
 				</li>
 				<li>
 					<def>OuterRim_DroidFluidReprocessor</def>
+					<customLabel>right fluid reprocessor</customLabel>
 					<coverage>0.04</coverage>
 					<depth>Inside</depth>
 					<groups>
@@ -286,6 +287,7 @@
 				</li>
 				<li>
 					<def>OuterRim_DroidFluidReprocessor</def>
+					<customLabel>left fluid reprocessor</customLabel>
 					<coverage>0.04</coverage>
 					<depth>Inside</depth>
 					<groups>

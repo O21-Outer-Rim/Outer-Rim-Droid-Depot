@@ -153,6 +153,7 @@
 				</li>
 				<li>
 					<def>OuterRim_DroidFluidReprocessor</def>
+					<customLabel>right fluid reprocessor</customLabel>
 					<coverage>0.05</coverage>
 					<depth>Inside</depth>
 					<groups>
@@ -161,6 +162,7 @@
 				</li>
 				<li>
 					<def>OuterRim_DroidFluidReprocessor</def>
+					<customLabel>left fluid reprocessor</customLabel>
 					<coverage>0.05</coverage>
 					<depth>Inside</depth>
 					<groups>
