@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base: Droid body part -->
+	<ThingDef Name="ORDroidBodyPartBase_Makeshift" Abstract="True">
+		<graphicData>
+			<texPath>OuterRim/Items/DroidBodyPart_Makeshift</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>0</Beauty>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>300</workAmount>
+			<productCount>3</productCount>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<OuterRim_Durasteel>45</OuterRim_Durasteel>
+		</costList>
+		<thingCategories>
+			<li>OuterRim_DroidParts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>DroidParts</li>
+			<li>DroidParts_Makeshift</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>DroidMakeshift</li>
+		</techHediffsTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+	<RecipeDef Name="ORDroidSurgery_InstallMakeshiftBodyPartBase" ParentName="ORDroidSurgery_InstallImplantBase" Abstract="True">
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>100</surgerySuccessChanceFactor>
+		<anesthetize>false</anesthetize>
+		<skillRequirements Inherit="False">
+			<Crafting>3</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- Droid Reactor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidReactor_Makeshift</defName>
+		<label>droid reactor (makeshift)</label>
+		<description>A makeshift droid reactor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftReactor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidReactor_Makeshift</defName>
+		<label>makeshift reactor</label>
+		<labelNoun>a makeshift reactor</labelNoun>
+		<description>An installed makeshift reactor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidReactor_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftReactor</defName>
+		<label>install makeshift reactor</label>
+		<description>Install a makeshift reactor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidReactor_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidReactor_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidReactor_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidReactor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidReactor_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Fluid Reprocessor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidFluidReprocessor_Makeshift</defName>
+		<label>droid fluid reprocessor (makeshift)</label>
+		<description>A makeshift droid fluid reprocessor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftFluidReprocessor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFluidReprocessor_Makeshift</defName>
+		<label>makeshift fluid reprocessor</label>
+		<labelNoun>a makeshift fluid reprocessor</labelNoun>
+		<description>An installed makeshift fluid reprocessor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFluidReprocessor_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftFluidReprocessor</defName>
+		<label>install makeshift fluid reprocessor</label>
+		<description>Install a makeshift fluid reprocessor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFluidReprocessor_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing fluid reprocessor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFluidReprocessor_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFluidReprocessor_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFluidReprocessor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFluidReprocessor_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sight Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidSightSensor_Makeshift</defName>
+		<label>droid sight sensor (makeshift)</label>
+		<description>A makeshift droid sight sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftSightSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSightSensor_Makeshift</defName>
+		<label>makeshift sight sensor</label>
+		<labelNoun>a makeshift sight sensor</labelNoun>
+		<description>An installed makeshift sight sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSightSensor_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftSightSensor</defName>
+		<label>install makeshift sight sensor</label>
+		<description>Install a makeshift sight sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSightSensor_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sight sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSightSensor_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSightSensor_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSightSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSightSensor_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sound Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidSoundSensor_Makeshift</defName>
+		<label>droid sound sensor (makeshift)</label>
+		<description>A makeshift droid sound sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftSoundSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSoundSensor_Makeshift</defName>
+		<label>makeshift sound sensor</label>
+		<labelNoun>a makeshift sound sensor</labelNoun>
+		<description>An installed makeshift sound sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSoundSensor_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftSoundSensor</defName>
+		<label>install makeshift sound sensor</label>
+		<description>Install a makeshift sound sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSoundSensor_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sound sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSoundSensor_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSoundSensor_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSoundSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSoundSensor_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Smell Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidSmellSensor_Makeshift</defName>
+		<label>droid chemical analyser (makeshift)</label>
+		<description>A makeshift droid chemical analyser component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftSmellSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSmellSensor_Makeshift</defName>
+		<label>makeshift chemical analyser</label>
+		<labelNoun>a makeshift chemical analyser</labelNoun>
+		<description>An installed makeshift chemical analyser.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSmellSensor_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftSmellSensor</defName>
+		<label>install makeshift chemical analyser</label>
+		<description>Install a makeshift chemical analyser.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSmellSensor_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing chemical analyser.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSmellSensor_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSmellSensor_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSmellSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSmellSensor_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Arm -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidArm_Makeshift</defName>
+		<label>droid arm (makeshift)</label>
+		<description>A makeshift droid arm replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftArm</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidArm_Makeshift</defName>
+		<label>makeshift arm</label>
+		<labelNoun>a makeshift droid arm</labelNoun>
+		<description>An installed makeshift droid arm.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidArm_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftArm</defName>
+		<label>install makeshift droid arm</label>
+		<description>Install a makeshift droid arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidArm_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidArm_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidArm_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidShoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidArm_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Hand -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidHand_Makeshift</defName>
+		<label>droid hand (makeshift)</label>
+		<description>A makeshift droid hand replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftHand</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidHand_Makeshift</defName>
+		<label>makeshift hand</label>
+		<labelNoun>a makeshift droid hand</labelNoun>
+		<description>An installed makeshift droid hand.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidHand_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftHand</defName>
+		<label>install makeshift droid hand</label>
+		<description>Install a makeshift droid hand.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidHand_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidHand_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidHand_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidHand_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Leg -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidLeg_Makeshift</defName>
+		<label>droid leg (makeshift)</label>
+		<description>A makeshift droid leg replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidLeg_Makeshift</defName>
+		<label>makeshift leg</label>
+		<labelNoun>a makeshift droid leg</labelNoun>
+		<description>An installed makeshift droid leg.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidLeg_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftLeg</defName>
+		<label>install makeshift droid leg</label>
+		<description>Install a makeshift droid leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidLeg_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidLeg_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidLeg_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidLeg_Makeshift</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Foot -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Makeshift">
+		<defName>OuterRim_DroidFoot_Makeshift</defName>
+		<label>droid foot (makeshift)</label>
+		<description>A makeshift droid foot replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallMakeshiftFoot</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFoot_Makeshift</defName>
+		<label>makeshift foot</label>
+		<labelNoun>a makeshift droid foot</labelNoun>
+		<description>An installed makeshift droid foot.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFoot_Makeshift</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallMakeshiftBodyPartBase">
+		<defName>OuterRim_Droid_InstallMakeshiftFoot</defName>
+		<label>install makeshift droid foot</label>
+		<description>Install a makeshift droid foot.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFoot_Makeshift</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid foot.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFoot_Makeshift</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFoot_Makeshift</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFoot</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFoot_Makeshift</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

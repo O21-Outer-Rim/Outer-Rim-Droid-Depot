@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="OuterRim_DroidAssembly">
+		<defName>OuterRim_DroidFactory</defName>
+		<label>droid factory</label>
+		<description>A hypertech factory installation for droid production.</description>
+		<thingClass>Asimov.Building_AutoCrafter</thingClass>
+		<graphicData>
+			<texPath>OuterRim/Building/DroidBay/DroidBay</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>false</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<costList>
+			<OuterRim_Durasteel>150</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>12</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+		  <li>BuildingsProduction</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>20</Mass>
+			<WorkToBuild>3000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<size>(3,2)</size>
+		<designationCategory>OuterRim_ArchitectHypertech</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<tickerType>Normal</tickerType>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <inspectorTabs>
+            <li>Asimov.ITab_AutoCrafter</li>
+        </inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="Asimov.CompProperties_AutoCrafter">
+				<craftingTimeMulti>1.0</craftingTimeMulti>
+				<recipes>
+					<!-- Animal -->
+					<li>OuterRim_MakeGNKDroid</li>
+					<li>OuterRim_MakeMSEDroid</li>
+					<li>OuterRim_MakeMuckrakerDroid</li>
+					<li>OuterRim_MakeDUMDroid</li>
+					<li>OuterRim_MakeRSeriesDroid</li>
+					<li>OuterRim_MakeFX7Droid</li>
+					<li>OuterRim_MakeDestroyerDroid</li>
+					<li>OuterRim_MakeSalvageAssistDroid</li>
+					<!-- Humanlike -->
+					<li>OuterRim_MakeBattleDroid</li>
+					<li>OuterRim_MakeBattleDroidAdvanced</li>
+					<li>OuterRim_MakeCommandoDroid</li>
+					<li>OuterRim_MakeMagnaGuardDroid</li>
+					<li>OuterRim_MakeSuperBattleDroid</li>
+					<li>OuterRim_MakeSuperTacticalDroid</li>
+					<li>OuterRim_MakeTacticalDroid</li>
+					<li>OuterRim_MakeHKDroid</li>
+					<li>OuterRim_MakeKXSecurityDroid</li>
+					<li>OuterRim_MakeProtocolDroid</li>
+					<li>OuterRim_MakeImperialLaborDroid</li>
+				</recipes>
+			</li>
+			<!-- <li Class="Asimov.CompProperties_AutoCrafterOverlay">
+				<recipeStates> -->
+					<!-- Old Republic Droids -->
+					<!-- <li>
+						<recipeDef>OuterRim_HKDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_HK</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_HK50Droid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_HK50</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_HK51Droid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_HK51</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- Clone Wars Droids -->
+					<!-- <li>
+						<recipeDef>OuterRim_BattleDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_B1</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_CommandoDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_BX</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_DestroyerDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_Droideka</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_MagnaGuardDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_Magnaguard</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_SuperBattleDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_B2</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_SuperTacticalDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_SuperTactical</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- <li>
+						<recipeDef>OuterRim_TacticalDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_Tactical</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+					<!-- Galactic Empire Droids -->
+					<!-- <li>
+						<recipeDef>OuterRim_KXSecurityDroid</recipeDef>
+						<states>
+							<li>
+								<texPath>OuterRim/Building/DroidBay/DroidAssembly_KX</texPath>
+								<progress>0</progress>
+							</li>
+						</states>
+					</li> -->
+				<!-- </recipeStates>
+			</li> -->
+		</comps>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>OuterRim_DroidEngineering</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_SubCategoryBuilding">
+				<subCategory>OuterRim_SubCatProduction</subCategory>
+				<showOnlyInCategory>false</showOnlyInCategory>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

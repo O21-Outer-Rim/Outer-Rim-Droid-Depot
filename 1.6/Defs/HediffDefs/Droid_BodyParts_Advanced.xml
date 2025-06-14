@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base: Droid body part -->
+	<ThingDef Name="ORDroidBodyPartBase_Advanced" Abstract="True">
+		<graphicData>
+			<texPath>OuterRim/Items/DroidBodyPart_Advanced</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>0</Beauty>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>300</workAmount>
+			<productCount>1</productCount>
+			<workSkill>Crafting</workSkill>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+			<researchPrerequisite>OuterRim_DroidReplacementPartsAdv</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<OuterRim_Durasteel>25</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>OuterRim_DroidParts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>DroidParts</li>
+			<li>DroidParts_Advanced</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>DroidAdvanced</li>
+		</techHediffsTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+	<RecipeDef Name="ORDroidSurgery_InstallAdvancedBodyPartBase" ParentName="ORDroidSurgery_InstallImplantBase" Abstract="True">
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>100</surgerySuccessChanceFactor>
+		<anesthetize>false</anesthetize>
+		<skillRequirements Inherit="False">
+			<Crafting>10</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- Droid Reactor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidReactor_Advanced</defName>
+		<label>droid reactor (advanced)</label>
+		<description>A advanced droid reactor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedReactor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidReactor_Advanced</defName>
+		<label>advanced reactor</label>
+		<labelNoun>a advanced reactor</labelNoun>
+		<description>An installed advanced reactor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidReactor_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedReactor</defName>
+		<label>install advanced reactor</label>
+		<description>Install a advanced reactor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidReactor_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidReactor_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidReactor_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidReactor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidReactor_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Fluid Reprocessor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidFluidReprocessor_Advanced</defName>
+		<label>droid fluid reprocessor (advanced)</label>
+		<description>A advanced droid fluid reprocessor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedFluidReprocessor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFluidReprocessor_Advanced</defName>
+		<label>advanced fluid reprocessor</label>
+		<labelNoun>a advanced fluid reprocessor</labelNoun>
+		<description>An installed advanced fluid reprocessor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFluidReprocessor_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedFluidReprocessor</defName>
+		<label>install advanced fluid reprocessor</label>
+		<description>Install a advanced fluid reprocessor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFluidReprocessor_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing fluid reprocessor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFluidReprocessor_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFluidReprocessor_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFluidReprocessor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFluidReprocessor_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sight Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidSightSensor_Advanced</defName>
+		<label>droid sight sensor (advanced)</label>
+		<description>A advanced droid sight sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedSightSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSightSensor_Advanced</defName>
+		<label>advanced sight sensor</label>
+		<labelNoun>a advanced sight sensor</labelNoun>
+		<description>An installed advanced sight sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSightSensor_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedSightSensor</defName>
+		<label>install advanced sight sensor</label>
+		<description>Install a advanced sight sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSightSensor_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sight sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSightSensor_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSightSensor_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSightSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSightSensor_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Sound Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidSoundSensor_Advanced</defName>
+		<label>droid sound sensor (advanced)</label>
+		<description>A advanced droid sound sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedSoundSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSoundSensor_Advanced</defName>
+		<label>advanced sound sensor</label>
+		<labelNoun>a advanced sound sensor</labelNoun>
+		<description>An installed advanced sound sensor.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSoundSensor_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedSoundSensor</defName>
+		<label>install advanced sound sensor</label>
+		<description>Install a advanced sound sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSoundSensor_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sound sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSoundSensor_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSoundSensor_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSoundSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSoundSensor_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Smell Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidSmellSensor_Advanced</defName>
+		<label>droid chemical analyser (advanced)</label>
+		<description>A advanced droid chemical analyser component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedSmellSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidSmellSensor_Advanced</defName>
+		<label>advanced chemical analyser</label>
+		<labelNoun>a advanced chemical analyser</labelNoun>
+		<description>An installed advanced chemical analyser.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidSmellSensor_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedSmellSensor</defName>
+		<label>install advanced chemical analyser</label>
+		<description>Install a advanced chemical analyser.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSmellSensor_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing chemical analyser.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSmellSensor_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSmellSensor_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSmellSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidSmellSensor_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Arm -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidArm_Advanced</defName>
+		<label>droid arm (advanced)</label>
+		<description>A advanced droid arm replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedArm</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidArm_Advanced</defName>
+		<label>advanced arm</label>
+		<labelNoun>a advanced droid arm</labelNoun>
+		<description>An installed advanced droid arm.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidArm_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedArm</defName>
+		<label>install advanced droid arm</label>
+		<description>Install a advanced droid arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidArm_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidArm_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidArm_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidShoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidArm_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Hand -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidHand_Advanced</defName>
+		<label>droid hand (advanced)</label>
+		<description>A advanced droid hand replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedHand</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidHand_Advanced</defName>
+		<label>advanced hand</label>
+		<labelNoun>a advanced droid hand</labelNoun>
+		<description>An installed advanced droid hand.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidHand_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedHand</defName>
+		<label>install advanced droid hand</label>
+		<description>Install a advanced droid hand.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidHand_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidHand_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidHand_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidHand_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Leg -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidLeg_Advanced</defName>
+		<label>droid leg (advanced)</label>
+		<description>A advanced droid leg replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidLeg_Advanced</defName>
+		<label>advanced leg</label>
+		<labelNoun>a advanced droid leg</labelNoun>
+		<description>An installed advanced droid leg.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidLeg_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedLeg</defName>
+		<label>install advanced droid leg</label>
+		<description>Install a advanced droid leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidLeg_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidLeg_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidLeg_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidLeg_Advanced</addsHediff>
+	</RecipeDef>
+
+	<!-- Droid Foot -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidFoot_Advanced</defName>
+		<label>droid foot (advanced)</label>
+		<description>A advanced droid foot replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallAdvancedFoot</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="ORDroidAddedBodyPartBase">
+		<defName>OuterRim_DroidFoot_Advanced</defName>
+		<label>advanced foot</label>
+		<labelNoun>a advanced droid foot</labelNoun>
+		<description>An installed advanced droid foot.</description>
+		<priceImpact>false</priceImpact>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>OuterRim_DroidFoot_Advanced</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallAdvancedBodyPartBase">
+		<defName>OuterRim_Droid_InstallAdvancedFoot</defName>
+		<label>install advanced droid foot</label>
+		<description>Install a advanced droid foot.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFoot_Advanced</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid foot.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFoot_Advanced</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFoot_Advanced</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFoot</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidFoot_Advanced</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

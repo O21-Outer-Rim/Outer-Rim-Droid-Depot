@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Shielding: EMP -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Advanced">
+		<defName>OuterRim_DroidShielding_EMP</defName>
+		<label>droid shielding (emp)</label>
+		<description>A droid shielding module that protects them from EMP damage.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallEMPDroidShielding</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>OuterRim_DroidAdvancedSys</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>OuterRim_DroidShielding_EMP</defName>
+		<label>droid shielding (emp)</label>
+		<description>A droid shielding module that protects them from EMP damage.</description>
+    	<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<priceImpact>false</priceImpact>
+		<modExtensions>
+			<li Class="TabulaRasa.DefModExt_EMPShielding" />
+		</modExtensions>
+		<spawnThingOnRemoved>OuterRim_DroidShielding_EMP</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallImplantBase">
+		<defName>OuterRim_Droid_InstallEMPDroidShielding</defName>
+		<label>install droid shielding (emp)</label>
+		<description>Install droid shielding (emp).</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidShielding_EMP</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid shielding.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidShielding_EMP</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidShielding_EMP</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Waist</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidShielding_EMP</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

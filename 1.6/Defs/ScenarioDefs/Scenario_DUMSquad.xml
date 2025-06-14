@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>OuterRim_RogueDroidColony</defName>
+		<label>Rogue Droids</label>
+		<description>A colony of recently-arrived rogue droids.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>OuterRim_EscapedBattleDroid</basicMemberKind>
+		<pawnSingular>colonist</pawnSingular>
+		<pawnsPlural>colonists</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures>
+			<li>Astropolitan</li>
+		</allowedCultures>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+			<li>ClassicStart</li>
+			<li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>OuterRim_EscapedBattleDroid</defName>
+		<label>escaped battle droid</label>
+		<race>OuterRim_BattleDroid</race>
+		<defaultFactionType>OuterRim_RogueDroidColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>OuterRimDroidBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="false" />
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>0~0</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsChance>0.1</techHediffsChance>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsTags>
+			<li>DroidParts_Makeshift</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<initialResistanceRange>13~21</initialResistanceRange>
+	</PawnKindDef>
+
+	<ScenarioDef>
+		<defName>OuterRim_DUMSquad</defName>
+		<label>DUM Squad</label>
+		<description>You've escaped from your master, finally, a lone, brave and independent B1 Battle Droid, with your 4 new...let's go with comrades, three DUM-Series droids, more commonly known as Pit Droids and a GNK power droid accompanied you on your escape, gathering up all the useful items you could on the way to the escape pod. You have no idea where you are, but it can't be worse than with your now former owner.</description>
+		<scenario>
+			<summary>Five escaped droids, forging their own future.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>OuterRim_RogueDroidColony</factionDef>
+			</playerFaction>
+			<parts>
+				<!-- Config pages -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>1</pawnCount>
+					<pawnChoiceCount>1</pawnChoiceCount>
+				</li>
+				<!-- Player starting stuff spawn method-->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
+				<!-- Player pawns modifiers -->
+				<li Class="Asimov.ScenPart_StartingAutomatons">
+					<def>Asimov_StartingAutomatons</def>
+					<automatonKind>OuterRim_DUMDroid</automatonKind>
+					<count>3</count>
+				</li>
+				<li Class="Asimov.ScenPart_StartingAutomatons">
+					<def>Asimov_StartingAutomatons</def>
+					<automatonKind>OuterRim_GNKDroid</automatonKind>
+					<count>1</count>
+				</li>
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>800</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Asimov_Chargepack</thingDef>
+					<count>50</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Asimov_ChargepackCharger</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Battery</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>OuterRim_DroidReactivationKit</thingDef>
+					<count>5</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>OuterRim_RestraintBolt</thingDef>
+					<count>8</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>45</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>OuterRim_ComponentHypertech</thingDef>
+					<count>30</count>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>OuterRim_DroidEngineering</project>
+				</li>
+				<!-- Scatter some things near player start -->
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>450</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>300</count>
+				</li>
+				<!-- Scatter some things anywhere -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ShipChunk</thingDef>
+					<allowRoofed>false</allowRoofed>
+					<count>3</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>720</count>
+				</li>
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<textKey>GameStartDialog</textKey>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+</Defs>

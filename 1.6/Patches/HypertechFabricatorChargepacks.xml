@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Asimov_Chargepack"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>OuterRim_HypertechFabricator</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="OuterRim_HypertechFabricator"]/recipes</xpath>
+		<value>
+			<li>Asimov_RechargeChargepack</li>
+			<li>Asimov_RechargeChargepackBulk</li>
+		</value>
+	</Operation>
+
+</Patch>

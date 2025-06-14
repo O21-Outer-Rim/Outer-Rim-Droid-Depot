@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffGiverSetDef>
+		<defName>OuterRim_Droid</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Birthday">
+				<hediff>OuterRim_DroidStats</hediff>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0, 1)</li>
+					</points>
+				</ageFractionChanceCurve>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+	<HediffDef>
+		<defName>OuterRim_DroidStats</defName>
+		<label>droid stats</label>
+		<description>Background stats for all droids, doing things that can only easily be applied via a hidden hediff.</description>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<painFactor>0</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>OuterRim_RestraintBolt</defName>
+		<label>restraint bolt</label>
+		<description>A standard restraint bolt applied to a droid. Prevents them from "acting out", so no behavioural issues from traits, no escaping as a slave. It does however have the negative effect of making a droid less efficient.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<opinionOfOthersFactor>0</opinionOfOthersFactor>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0.75</setMax>
+					</li>
+				</capMods>
+				<statFactors>
+					<SlaveSuppressionFallRate MayRequire="Ludeon.RimWorld.Ideology">0</SlaveSuppressionFallRate>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
