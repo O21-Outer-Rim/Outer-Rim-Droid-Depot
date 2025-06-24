@@ -40,10 +40,6 @@ namespace OuterRimDroids
 					}
 				}
 			}
-            else
-			{
-				LogUtil.LogMessage("Should NOT Be Listed!");
-			}
 		}
 	}
 }

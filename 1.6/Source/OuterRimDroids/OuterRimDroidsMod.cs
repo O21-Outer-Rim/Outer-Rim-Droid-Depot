@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using TabulaRasa;
 using UnityEngine;
 using Verse;
 
@@ -29,7 +30,7 @@ namespace OuterRimDroids
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
 
-            LogUtil.LogMessage($"{CurrentVersion} ::");
+            Log.Message($":: Outer Rim - Droid Depot :: ".Colorize(Color.cyan) + $"{CurrentVersion} ::");
 
             if (Prefs.DevMode)
             {
@@ -40,14 +41,12 @@ namespace OuterRimDroids
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
-        public override string SettingsCategory() => "Outer Rim - Droid Depot";
-
-        public override void DoSettingsWindowContents(Rect inRect)
+        public void DoOptionsCategoryContents(Listing_Standard listing)
         {
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(inRect);
+            listing.GapLine();
+            listing.Note("Droid Depot", GameFont.Medium);
+            listing.GapLine();
             listing.CheckboxLabeled("Droids can use non-droid apparel", ref settings.droidApparelCheck, "If enabled (disabled by default), allows droids to wear non-droid apparel.");
-            listing.End();
         }
     }
 }

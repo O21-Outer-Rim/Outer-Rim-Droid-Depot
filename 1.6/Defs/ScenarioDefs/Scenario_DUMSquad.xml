@@ -64,7 +64,7 @@
 		<initialResistanceRange>13~21</initialResistanceRange>
 	</PawnKindDef>
 
-	<ScenarioDef>
+	<ScenarioDef ParentName="ScenarioBase">
 		<defName>OuterRim_DUMSquad</defName>
 		<label>DUM Squad</label>
 		<description>You've escaped from your master, finally, a lone, brave and independent B1 Battle Droid, with your 4 new...let's go with comrades, three DUM-Series droids, more commonly known as Pit Droids and a GNK power droid accompanied you on your escape, gathering up all the useful items you could on the way to the escape pod. You have no idea where you are, but it can't be worse than with your now former owner.</description>

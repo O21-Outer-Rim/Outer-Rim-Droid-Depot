@@ -52,7 +52,7 @@
 				<enableAllWorkTypes>false</enableAllWorkTypes>
 				<skillSettings />
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Electrified">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Electrified">
 				<electroChargeAmount>5</electroChargeAmount>
 				<electroRate>60</electroRate>
 				<electroRadius>3</electroRadius>

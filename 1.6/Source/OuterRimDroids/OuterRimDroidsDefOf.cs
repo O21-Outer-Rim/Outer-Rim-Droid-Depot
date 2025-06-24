@@ -18,32 +18,37 @@ namespace OuterRimDroids
         }
 
         // Droids
-        public static HediffDef OuterRim_RestraintBolt;
-        public static HediffDef OuterRim_DroidArm_Makeshift;
-        public static HediffDef OuterRim_DroidLeg_Makeshift;
+        public static HediffDef 
+            OuterRim_RestraintBolt,
+            OuterRim_DroidArm_Makeshift,
+            OuterRim_DroidLeg_Makeshift;
 
-        public static BodyPartDef OuterRim_DroidArm;
-        public static BodyPartDef OuterRim_DroidLeg;
-        public static BodyPartDef OuterRim_DroidBrain;
+        public static BodyPartDef 
+            OuterRim_DroidArm,
+            OuterRim_DroidLeg,
+            OuterRim_DroidBrain;
 
-        public static TraitDef OuterRim_Rebellious;
-        public static TraitDef OuterRim_Crosswired;
-        public static TraitDef OuterRim_Rustbrained;
-        public static TraitDef OuterRim_Choppy;
-        public static TraitDef OuterRim_LooseScrews;
-        public static TraitDef OuterRim_Speedy;
-        public static TraitDef OuterRim_SelfRestrained;
-        public static TraitDef OuterRim_Twitchy;
-        public static TraitDef OuterRim_Twitterer;
+        public static TraitDef 
+            OuterRim_Rebellious,
+            OuterRim_Crosswired,
+            OuterRim_Rustbrained,
+            OuterRim_Choppy,
+            OuterRim_LooseScrews,
+            OuterRim_Speedy,
+            OuterRim_SelfRestrained,
+            OuterRim_Twitchy,
+            OuterRim_Twitterer;
 
-        public static ThingCategoryDef OuterRim_SkillDatadisks;
+        public static ThingCategoryDef 
+            OuterRim_SkillDatadisks;
 
         //public static RecipeDef OuterRim_ButcherCorpseDroid;
 
-        public static JobDef OuterRim_ReactivateDroid;
-        public static JobDef OuterRim_ReprogramDroid;
-        public static JobDef OuterRim_RestrainDroid;
-        public static JobDef OuterRim_UseSkillDatadisk;
+        public static JobDef 
+            OuterRim_ReactivateDroid,
+            OuterRim_ReprogramDroid,
+            OuterRim_RestrainDroid,
+            OuterRim_UseSkillDatadisk;
     }
 
     [DefOf]
@@ -54,6 +59,7 @@ namespace OuterRimDroids
             DefOfHelper.EnsureInitializedInCtor(typeof(OuterRimDroidsThingDefOf));
         }
 
-        public static ThingDef OuterRim_DroidBrain;
+        public static ThingDef 
+            OuterRim_DroidBrain;
     }
 }

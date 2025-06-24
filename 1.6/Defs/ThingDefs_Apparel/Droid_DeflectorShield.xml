@@ -59,7 +59,7 @@
 			</defaultOutfitTags>
 		</apparel>
 		<comps>
-			<li Class="VFECore.CompProperties_ShieldBubble">
+			<li Class="VEF.Apparels.CompProperties_ShieldBubble">
 				<EnergyShieldEnergyMax>120</EnergyShieldEnergyMax>
 				<EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
 				<blockRangedAttack>True</blockRangedAttack>

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\outerrimdroidsmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:outerrimdroidsmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\harmony\\patch_outerrimcoremod_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:harmony\\patch_outerrimcoremod_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\harmony\\patch_floatmenumakermap_choicesatfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:harmony\\patch_floatmenumakermap_choicesatfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\jobs\\jobdriver_reactivatedroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:jobs\\jobdriver_reactivatedroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\patchoperation\\patchoperation_settingactive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:patchoperation\\patchoperation_settingactive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patch_OuterRimCoreMod_Settings.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_OuterRimCoreMod_Settings.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_OuterRimCoreMod_Settings.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_OuterRimCoreMod_Settings.cs",
+              "RelativeToolTip": "Harmony\\Patch_OuterRimCoreMod_Settings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T17:03:53.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
+              "RelativeToolTip": "Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:52:15.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatchOperation_SettingActive.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\PatchOperation\\PatchOperation_SettingActive.cs",
+              "RelativeDocumentMoniker": "PatchOperation\\PatchOperation_SettingActive.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\PatchOperation\\PatchOperation_SettingActive.cs",
+              "RelativeToolTip": "PatchOperation\\PatchOperation_SettingActive.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAvwB0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:51:44.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobDriver_ReactivateDroid.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Jobs\\JobDriver_ReactivateDroid.cs",
+              "RelativeDocumentMoniker": "Jobs\\JobDriver_ReactivateDroid.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Jobs\\JobDriver_ReactivateDroid.cs",
+              "RelativeToolTip": "Jobs\\JobDriver_ReactivateDroid.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAvwJ0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:51:32.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OuterRimDroidsMod.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\OuterRimDroidsMod.cs",
+              "RelativeDocumentMoniker": "OuterRimDroidsMod.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\OuterRimDroidsMod.cs",
+              "RelativeToolTip": "OuterRimDroidsMod.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwCsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:50:48.703Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

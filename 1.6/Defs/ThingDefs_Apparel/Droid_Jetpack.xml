@@ -57,7 +57,7 @@
 			</defaultOutfitTags>
 		</apparel>
 		<comps>
-			<li Class="VFECore.Abilities.CompProperties_AbilitiesApparel">
+			<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
 				<abilities>
 					<li>OuterRim_DroidJetpackJump</li>
 				</abilities>
@@ -65,9 +65,9 @@
 		</comps>
 	</ThingDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="OuterRimJetpackAbilityBase">
+	<VEF.Abilities.AbilityDef ParentName="OuterRimJetpackAbilityBase">
 		<defName>OuterRim_DroidJetpackJump</defName>
 		<iconPath>OuterRim/Items/DroidFunctionModule</iconPath>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
 </Defs>

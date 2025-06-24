@@ -104,7 +104,7 @@ namespace OuterRimDroids
             }
 			if (pawn.Dead)
 			{
-				LogUtil.LogError("The pawn has died while being repaired, resurrecting. Shouldn't happen but you never know with this game.");
+				Log.Error("The pawn has died while being repaired, resurrecting. Shouldn't happen but you never know with this game.");
 				ResurrectionUtility.TryResurrect(pawn);
 			}
 		}
@@ -155,7 +155,7 @@ namespace OuterRimDroids
 			}
 			if (pawn.Dead)
 			{
-				LogUtil.LogError("The pawn has died while being resurrected.");
+				Log.Error("The pawn has died while being resurrected.");
 				ResurrectionUtility.TryResurrect(pawn);
 			}
 		}
