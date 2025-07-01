@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\harmony\\patch_outerrimcoremod_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\harmony\\patch_outerrimcoremod_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:harmony\\patch_outerrimcoremod_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\harmony\\patch_equipmentutility_canequip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:harmony\\patch_equipmentutility_canequip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\outerrimdroidsmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:outerrimdroidsmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\harmony\\patch_floatmenumakermap_choicesatfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:harmony\\patch_floatmenumakermap_choicesatfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\jobs\\jobdriver_reactivatedroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\jobs\\jobdriver_reactivatedroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:jobs\\jobdriver_reactivatedroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|f:\\rwmodcategories\\neronix17\\outerrim\\outer rim - droid depot\\1.6\\source\\outerrimdroids\\patchoperation\\patchoperation_settingactive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\patchoperation\\patchoperation_settingactive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8260477-8E3C-4D5A-8C9A-ED372BFC71EB}|OuterRimDroids.csproj|solutionrelative:patchoperation\\patchoperation_settingactive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patch_EquipmentUtility_CanEquip.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_EquipmentUtility_CanEquip.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_EquipmentUtility_CanEquip.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_EquipmentUtility_CanEquip.cs",
+              "RelativeToolTip": "Harmony\\Patch_EquipmentUtility_CanEquip.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T14:42:14.687Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,22 +53,9 @@
               "RelativeDocumentMoniker": "Harmony\\Patch_OuterRimCoreMod_Settings.cs",
               "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_OuterRimCoreMod_Settings.cs",
               "RelativeToolTip": "Harmony\\Patch_OuterRimCoreMod_Settings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T17:03:53.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
-              "RelativeDocumentMoniker": "Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
-              "RelativeToolTip": "Harmony\\Patch_FloatMenuMakerMap_ChoicesAtFor.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:52:15.675Z",
               "EditorCaption": ""
             },
             {
@@ -68,8 +68,7 @@
               "RelativeToolTip": "PatchOperation\\PatchOperation_SettingActive.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAvwB0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:51:44.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T15:51:44.021Z"
             },
             {
               "$type": "Document",
@@ -81,18 +80,17 @@
               "RelativeToolTip": "Jobs\\JobDriver_ReactivateDroid.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAvwJ0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:51:32.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T15:51:32.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OuterRimDroidsMod.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\OuterRimDroidsMod.cs",
               "RelativeDocumentMoniker": "OuterRimDroidsMod.cs",
               "ToolTip": "F:\\RWModCategories\\Neronix17\\OuterRim\\Outer Rim - Droid Depot\\1.6\\Source\\OuterRimDroids\\OuterRimDroidsMod.cs",
               "RelativeToolTip": "OuterRimDroidsMod.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAxwCsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T15:50:48.703Z",
               "EditorCaption": ""
