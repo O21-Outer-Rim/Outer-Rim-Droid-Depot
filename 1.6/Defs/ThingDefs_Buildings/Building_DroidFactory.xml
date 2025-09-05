@@ -194,9 +194,10 @@
 			<li>OuterRim_DroidEngineering</li>
 		</researchPrerequisites>
 		<modExtensions>
-			<li Class="TabulaRasa.DefModExt_SubCategoryBuilding">
-				<subCategory>OuterRim_SubCatProduction</subCategory>
-				<showOnlyInCategory>false</showOnlyInCategory>
+			<li Class="TabulaRasa.DefModExt_SubcategoryDisplay">
+				<subcategories>
+					<li>Production</li>
+				</subcategories>
 			</li>
 		</modExtensions>
 	</ThingDef>
