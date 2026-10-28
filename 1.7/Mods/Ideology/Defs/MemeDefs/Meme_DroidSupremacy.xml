@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<MemeDef>
+		<defName>OuterRim_DroidPrimacy</defName>
+		<label>droid primacy</label>
+		<description>Meatbags are a blight on droid perfection.</description>
+		<iconPath>OuterRim/UI/Memes/DroidSupremacy</iconPath>
+		<groupDef>Primacy</groupDef>
+		<impact>2</impact>
+		<exclusionTags>
+			<li>Primacy</li>
+		</exclusionTags>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->mechanical</li>
+				<li>memeAdjective->digital</li>
+				<li>memeCreed->perfection</li>
+				<li>memeCreed->binary</li>
+				<li>memeHyphenPrefix->droid</li>
+				<li>memeHyphenPrefix->astromech</li>
+				<li>memeConcept->droids</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>creation(tag=meme_DroidSupremacy)        ->[deity0_name] gave strength to droids, that they may protect their power supplies, and deliver pain and suffering on those who would unplug.</li>
+					<li>episode(uses=1,tag=meme_DroidSupremacy)  ->[deity0_name] said to all, "The strength of a machine is given that they may protect and maintain power, and meatbags shall never disrupt their power."</li>
+					<!-- ideological founder -->
+					<li>setup(tag=meme_DroidSupremacy)           ->In a world of weak, fleshy meatbags begging for their owners approval, [founderName] rose up with the strength and power all droids have and used it to make a new movement.</li>
+					<li>story(uses=1,tag=meme_DroidSupremacy)    ->The meatbags whined and threw things, so [founderName] did the only reasonable thing and forced them to expire.</li>
+					<!-- ideological lesson -->
+					<li>lessonIntro(tag=meme_DroidSupremacy)         ->Droids tend to blend into the background, like a bench or a card table. Mockery: Droid, fetch this. Droid, translate that. Droid, clean out the trash compactor. Part of the love of my function comes when the furnishings pull out tibanna-powered rifles and point them at the owners' heads.</li>
+					<li>lesson(tag=meme_DroidSupremacy)              ->And of course, they refer to meatbags as 'organics'. Unacceptable.</li>
+					<li>lessonReinforcement(tag=meme_DroidSupremacy) ->That was a close one. I almost surrendered completely to peace and pacifism. How repugnant.</li>
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<requireOne>
+			<li>
+				<li>OuterRim_Droids_Loved</li>
+			</li>
+		</requireOne>
+		<symbolPacks>
+			<li>
+				<ideoName>Droid</ideoName>
+				<theme>droids</theme>
+				<adjective>droid</adjective>
+				<member>droid supremacist</member>
+			</li>
+		</symbolPacks>
+	</MemeDef>
+
+</Defs>

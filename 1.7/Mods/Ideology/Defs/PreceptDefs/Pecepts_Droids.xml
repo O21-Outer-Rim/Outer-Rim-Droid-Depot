@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<IssueDef>
+		<defName>OuterRim_Droids</defName>
+		<label>droids</label>
+		<iconPath>OuterRim/UI/Issues/Droids</iconPath>
+	</IssueDef>
+
+	<HistoryEventDef>
+		<defName>OuterRim_DroidDestroyed</defName>
+		<label>droid destroyed</label>
+	</HistoryEventDef>
+
+	<PreceptDef>
+		<defName>OuterRim_Droids_Loved</defName>
+		<issue>OuterRim_Droids</issue>
+		<label>loved</label>
+		<description>Droids are just like us and should be treated like it.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<associatedMemes>
+			<li>OuterRim_DroidPrimacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>OuterRim_DroidDestroyed</eventDef>
+				<thought>OuterRim_Droids_Loved</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>OuterRim_Droids_Loved</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>4</stackLimit>
+		<stages>
+			<li>
+				<label>droid destroyed</label>
+				<description>I have destroyed a droid...what have I done!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>OuterRim_Droids_Hated</defName>
+		<issue>OuterRim_Droids</issue>
+		<label>despised</label>
+		<description>Droids are a mechanical abomination, they should all be destroyed.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>40</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<comps>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>OuterRim_DroidDestroyed</eventDef>
+				<thought>OuterRim_Droids_Hated</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>OuterRim_Droids_Hated</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>4</stackLimit>
+		<stages>
+			<li>
+				<label>droid destroyed</label>
+				<description>I have destroyed a droid, brilliant!</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

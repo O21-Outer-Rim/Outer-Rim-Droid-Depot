@@ -1,0 +1,11 @@
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.csproj.AssemblyReference.cache
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.GeneratedMSBuildEditorConfig.editorconfig
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.AssemblyInfoInputs.cache
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.AssemblyInfo.cs
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.csproj.CoreCompileInputs.cache
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.sourcelink.json
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Assemblies\OuterRimDroids.dll
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRimDroids.dll
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\refint\OuterRimDroids.dll
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\ref\OuterRimDroids.dll
+G:\RWModCategories\Neronix17\OuterRim\Outer Rim - Droid Depot\1.7\Source\OuterRimDroids\obj\Debug\OuterRim.94C44EB8.Up2Date

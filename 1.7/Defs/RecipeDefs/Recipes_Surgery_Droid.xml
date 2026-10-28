@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>OuterRim_ShutDownDroid</defName>
+		<label>shut down and disassemble</label>
+		<description>Shuts down a droid and disassembles for materials.</description>
+		<workerClass>TabulaRasa.Recipe_Disassemble</workerClass>
+		<jobString>Shutting down droid and disassembling.</jobString>
+		<soundWorking>Interact_Repair</soundWorking>
+		<workAmount>1600</workAmount>
+		<targetsBodyPart>false</targetsBodyPart>
+		<effectWorking>Repair</effectWorking>
+		<isViolation>true</isViolation>
+		<anesthetize>false</anesthetize>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>OuterRim_AttachRestraintBolt</defName>
+		<label>attach restraint bolt</label>
+		<description>Attaches a small bolt to the droid capable of suppressing mental breaks and behaviours from traits they may have developed. Some factions may dislike this practice if they ever witness it, being seen as a form of slavery by them. It does however have the negative effect of making a droids abilities less efficient.</description>
+        <workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Attach restraint bolt.</jobString>
+		<soundWorking>Interact_Repair</soundWorking>
+		<workAmount>4500</workAmount>
+		<targetsBodyPart>false</targetsBodyPart>
+		<effectWorking>Repair</effectWorking>
+		<isViolation>true</isViolation>
+		<anesthetize>false</anesthetize>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>OuterRim_RestraintBolt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>OuterRim_RestraintBolt</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <addsHediff>OuterRim_RestraintBolt</addsHediff>
+        <descriptionHyperlinks>
+            <ThingDef>OuterRim_RestraintBolt</ThingDef>
+            <HediffDef>OuterRim_RestraintBolt</HediffDef>
+        </descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>OuterRim_RemoveRestraintBolt</defName>
+		<label>remove restraint bolt</label>
+		<description>Removes the restraint bolt from the droid, returning their free will to them. Bolt is destroyed in the process.</description>
+        <workerClass>OuterRimDroids.Recipe_RemoveBolt</workerClass>
+		<jobString>Removing restraint bolt.</jobString>
+		<soundWorking>Interact_Repair</soundWorking>
+		<workAmount>4500</workAmount>
+		<targetsBodyPart>false</targetsBodyPart>
+		<effectWorking>Repair</effectWorking>
+		<isViolation>false</isViolation>
+		<anesthetize>false</anesthetize>
+        <removesHediff>OuterRim_RestraintBolt</removesHediff>
+        <descriptionHyperlinks>
+            <ThingDef>OuterRim_RestraintBolt</ThingDef>
+            <HediffDef>OuterRim_RestraintBolt</HediffDef>
+        </descriptionHyperlinks>
+        <successfullyRemovedHediffMessage>{0} has successfully removed {1}'s restraint bolt.</successfullyRemovedHediffMessage>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>OuterRim_WipeDroidMind</defName>
+		<label>wipe droids memory</label>
+		<description>Erases the mind of the droid, restoring skills to factory settings and removing any developed traits.</description>
+		<workerClass>OuterRimDroids.Recipe_WipeDroid</workerClass>
+		<jobString>Wiping droids memory.</jobString>
+		<soundWorking>Interact_Repair</soundWorking>
+		<workAmount>6000</workAmount>
+		<targetsBodyPart>false</targetsBodyPart>
+		<effectWorking>Repair</effectWorking>
+		<isViolation>true</isViolation>
+		<anesthetize>false</anesthetize>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+	</RecipeDef>
+	
+</Defs>

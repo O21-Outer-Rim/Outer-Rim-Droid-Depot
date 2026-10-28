@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DroidApparelCraftableBase">
+		<defName>OuterRim_DroidArmorLight</defName>
+		<label>droid armor (light)</label>
+		<techLevel>Ultra</techLevel>
+		<description>Armor plating designed to be attached to a droid.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>1</Mass>
+			<Flammability>0.1</Flammability>
+			<EquipDelay>6</EquipDelay>
+			<StuffEffectMultiplierArmor>0.30</StuffEffectMultiplierArmor>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<tradeTags>
+			<li>OuterRimDroidArmor</li>
+		</tradeTags>
+		<apparel Inherit="False">
+			<tags>
+				<li>DroidArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<!-- TODO (RELEASE ONLY): Rename defname so it matches light/heavy-->
+	<ThingDef ParentName="DroidApparelCraftableBase">
+		<defName>OuterRim_DroidArmorModule</defName>
+		<label>droid armor (medium)</label>
+		<techLevel>Ultra</techLevel>
+		<description>Armor plating designed to be attached to a droid.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<OuterRim_ComponentHypertech>2</OuterRim_ComponentHypertech>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>3</Mass>
+			<Flammability>0.1</Flammability>
+			<EquipDelay>6</EquipDelay>
+			<StuffEffectMultiplierArmor>0.60</StuffEffectMultiplierArmor>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.8</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel Inherit="False">
+			<tags>
+				<li>DroidArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="DroidApparelCraftableBase">
+		<defName>OuterRim_DroidArmorHeavy</defName>
+		<label>droid armor (heavy)</label>
+		<techLevel>Ultra</techLevel>
+		<description>Armor plating designed to be attached to a droid.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+		</costList>
+		<costStuffCount>160</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>0.1</Flammability>
+			<EquipDelay>6</EquipDelay>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-1.2</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel Inherit="False">
+			<tags>
+				<li>DroidArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Alpha/Alpha</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+</Defs>

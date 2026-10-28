@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <TraitDef>
+        <defName>OuterRim_Rebellious</defName>
+        <commonality>0.01</commonality>
+        <degreeDatas>
+            <li>
+                <label>rebellious</label>
+                <description>{PAWN_nameDef} has a rebellious attitude, causing them to randomly decide to do a different task on occasion.</description>
+                <randomMentalState>OuterRim_MSRebellious</randomMentalState>
+                <randomMentalStateMtbDaysMoodCurve>
+                    <points>
+                        <li>(0, 50)</li>
+                    </points>
+                </randomMentalStateMtbDaysMoodCurve>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Crosswired</defName>
+        <commonality>0.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>crosswired</label>
+                <description>{PAWN_nameDef} has their wires crossed in just the right way to make it so they snap easier.</description>
+                <statOffsets>
+                    <MentalBreakThreshold>0.10</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Rustbrained</defName>
+        <commonality>0.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>rust brained</label>
+                <description>{PAWN_nameDef} doesn't learn as well as other droids of their model, they also have problems socially due to this.</description>
+                <statOffsets>
+                    <SocialImpact>-0.15</SocialImpact>
+                    <GlobalLearningFactor>-0.75</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Choppy</defName>
+        <commonality>0.05</commonality>
+        <degreeDatas>
+            <li>
+                <label>choppy</label>
+                <description>{PAWN_nameDef} has a much better threshold for mental breaks, but sometimes go on an insulting spree for no reason and is more likely to fight with others.</description>
+                <socialFightChanceFactor>2</socialFightChanceFactor>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+                </statOffsets>
+                <randomMentalState>InsultingSpree</randomMentalState>
+                <randomMentalStateMtbDaysMoodCurve>
+                    <points>
+                        <li>(0, 50)</li>
+                    </points>
+                </randomMentalStateMtbDaysMoodCurve>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_AP5Syndrome</defName>
+        <commonality>0.05</commonality>
+        <degreeDatas>
+            <li>
+                <label>ap-5 syndrome</label>
+                <description>{PAWN_nameDef} has developed a condition that has been documented rarely in droids where they become tired of being around others, to the point they don't really feel strongly about anything, it makes them break a lot less easily but they also tend to wander about all sad occasionally as a side effect.</description>
+                <statOffsets>
+                    <MentalBreakThreshold>0.2</MentalBreakThreshold>
+                </statOffsets>
+                <randomMentalState>Wander_Sad</randomMentalState>
+                <randomMentalStateMtbDaysMoodCurve>
+                    <points>
+                        <li>(0, 50)</li>
+                    </points>
+                </randomMentalStateMtbDaysMoodCurve>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_LooseScrews</defName>
+        <commonality>0.1</commonality>
+        <degreeDatas>
+            <li>
+                <label>loose screws</label>
+                <description>{PAWN_nameDef} has some screws loose and as a result they'll on a rare occasion lose some ability with a random skill.</description>
+                <randomMentalState>OuterRim_MSLooseScrews</randomMentalState>
+                <randomMentalStateMtbDaysMoodCurve>
+                    <points>
+                        <li>(0, 50)</li>
+                    </points>
+                </randomMentalStateMtbDaysMoodCurve>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Speedy</defName>
+        <commonality>0.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>speedy</label>
+                <description>{PAWN_nameDef} has exceptional reaction times, making them slightly faster than other droids of their model.</description>
+                <statOffsets>
+                    <MoveSpeed>0.4</MoveSpeed>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_SelfRestrained</defName>
+        <commonality>0.05</commonality>
+        <degreeDatas>
+            <li>
+                <label>self-restrained</label>
+                <description>{PAWN_nameDef} has learned to control their emotional programming to the extent usually only a restraint bolt provides, making them incapable of mental breaks.</description>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Twitchy</defName>
+        <commonality>0.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>twitchy</label>
+                <description>{PAWN_nameDef} has a glitch that causes them to twitch involuntarily, for most tasks this isn't much of an issue, but if {PAWN_pronoun} uses a ranged weapon their accuracy will be lowered.</description>
+                <statOffsets>
+                    <ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>OuterRim_Twitterer</defName>
+        <commonality>0.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>twitterer</label>
+                <description>{PAWN_nameDef} is particulalry chatty, if they are capable of social they'll be rather good at it, otherwise it's just more beeps and whirrs...</description>
+                <statOffsets>
+                    <SocialImpact>0.15</SocialImpact>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <requiredWorkTags>
+            <li>Social</li>
+        </requiredWorkTags>
+    </TraitDef>
+
+</Defs>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- ============================ B1 Childhoods ========================== -->
+
+	<BackstoryDef>
+		<defName>OuterRim_BackstoryDroidChild</defName>
+		<title>Droid</title>
+		<titleShort>Droid</titleShort>
+		<baseDesc>Droids, less commonly known as robots or automatons, are mechanical beings that possess artificial intellgience. They are used in a variety of roles and environments, often those considered too medial or dangerous for organic species, but also in fields that require extensive specialization and knowledge.</baseDesc>
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<spawnCategories>
+			<li>OuterRimDroidBackstory</li>
+		</spawnCategories>
+	</BackstoryDef>
+	
+	<!-- ============================ B1 Adulthoods ========================== -->
+
+	<BackstoryDef>
+		<defName>OuterRim_BackstoryDroidAdult</defName>
+		<title>Old Droid</title>
+		<titleShort>Old Droid</titleShort>
+		<baseDesc>Droids are often around for longer than their creators, some have been operational for hundreds, if not thousands of years.</baseDesc>
+		<slot>Adulthood</slot>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<spawnCategories>
+			<li>OuterRimDroidBackstory</li>
+		</spawnCategories>
+	</BackstoryDef>
+	
+</Defs>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="OuterRimBase_DroidWeapon">
+		<defName>OuterRim_DroidWeapon_WristBlaster</defName>
+		<label>wrist blaster</label>
+		<description>A droid wrist blaster, typically found on B2 Super Battle Droids but not uncommon on other models when they've been modified.</description>
+		<graphicData>
+			<texPath>OuterRim/Items/DroidFunctionModule</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList Inherit="False">
+			<OuterRim_Durasteel>25</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>4</OuterRim_ComponentHypertech>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>OuterRim_DroidWeaponSys</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.46</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OuterRim_Bullet_WristBlaster</defaultProjectile>
+				<warmupTime>0.2</warmupTime>
+				<range>26</range>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>OuterRim_Shot_BlasterBolt</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<li>ORDroidWeapon_WristBlaster</li>
+		</weaponTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>OuterRim_Bullet_WristBlaster</defName>
+		<label>blaster bolt</label>
+		<graphicData>
+			<texPath>OuterRim/Projectile/BlasterBolt_Red</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>OuterRim_Blaster</damageDef>
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>

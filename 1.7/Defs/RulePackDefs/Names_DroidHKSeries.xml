@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>OuterRim_NamerDroid_HK</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->HK-Series Unit</li>
+			</rulesStrings>
+			<rulesRaw />
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>OuterRim_NamerDroid_HK50</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->HK-50 Unit</li>
+			</rulesStrings>
+			<rulesRaw />
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>OuterRim_NamerDroid_HK51</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->HK-51 Unit</li>
+			</rulesStrings>
+			<rulesRaw />
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

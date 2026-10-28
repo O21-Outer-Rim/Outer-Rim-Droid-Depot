@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Shielding: General -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase_Overclocked">
+		<defName>OuterRim_DroidDamageShielding_Overclocked</defName>
+		<label>droid damage shielding (overclocked)</label>
+		<description>A droid shielding module that reduces all incoming damage.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallDroidDamageShielding_Overclocked</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>OuterRim_DroidAdvancedSys</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>OuterRim_DroidDamageShielding_Overclocked</defName>
+		<label>droid damage shielding (overclocked)</label>
+		<description>A droid shielding module that reduces all incoming damage.</description>
+    	<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<priceImpact>false</priceImpact>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.10</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>OuterRim_DroidDamageShielding_Overclocked</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallImplantBase">
+		<defName>OuterRim_Droid_InstallDroidDamageShielding_Overclocked</defName>
+		<label>install droid damage shielding (overclocked)</label>
+		<description>Install droid damage shielding (overclocked).</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidDamageShielding_Overclocked</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid shielding.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidDamageShielding_Overclocked</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidDamageShielding_Overclocked</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Waist</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>OuterRim_DroidDamageShielding_Overclocked</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

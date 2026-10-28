@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Name="ORDroidImplantHediffBase" Abstract="True">
+		<hediffClass>Hediff_Implant</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+	</HediffDef>
+
+	<HediffDef Name="ORDroidAddedBodyPartBase" ParentName="ORDroidImplantHediffBase" Abstract="True">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<priceImpact>true</priceImpact>
+	</HediffDef>
+
+	<RecipeDef Name="ORDroidSurgery_InstallImplantBase" Abstract="True">
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>100</surgerySuccessChanceFactor>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<workAmount>2500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+		<anesthetize>false</anesthetize>
+	</RecipeDef>
+
+</Defs>

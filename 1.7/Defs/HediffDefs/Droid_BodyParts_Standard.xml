@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base: Droid body part -->
+	<ThingDef Name="ORDroidBodyPartBase" Abstract="True">
+		<graphicData>
+			<texPath>OuterRim/Items/DroidBodyPart_Standard</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>false</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>0</Beauty>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>300</workAmount>
+			<productCount>3</productCount>
+			<workSkill>Crafting</workSkill>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>OuterRim_HypertechFabricator</li>
+			</recipeUsers>
+			<researchPrerequisite>OuterRim_DroidReplacementParts</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<OuterRim_Durasteel>30</OuterRim_Durasteel>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+		</costList>
+		<thingCategories>
+			<li>OuterRim_DroidParts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>DroidParts</li>
+			<li>DroidParts_Standard</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+	<RecipeDef Name="ORDroidSurgery_InstallStandardBodyPartBase" Abstract="True">
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>100</surgerySuccessChanceFactor>
+		<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+		<workAmount>2500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+		<anesthetize>false</anesthetize>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- Droid Brain -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidBrain</defName>
+		<label>droid brain</label>
+		<description>A standard droid brain.</description>
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<costList Inherit="False">
+			<OuterRim_Durasteel>30</OuterRim_Durasteel>
+			<Gold>1</Gold>
+			<OuterRim_ComponentHypertech>1</OuterRim_ComponentHypertech>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>OuterRim_DroidEngineering</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Droid Reactor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidReactor</defName>
+		<label>droid reactor</label>
+		<description>A standard droid reactor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardReactor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardReactor</defName>
+		<label>install standard reactor</label>
+		<description>Install a standard reactor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidReactor</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidReactor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidReactor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidReactor</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Fluid Reprocessor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidFluidReprocessor</defName>
+		<label>droid fluid reprocessor</label>
+		<description>A standard droid fluid reprocessor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardFluidReprocessor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardFluidReprocessor</defName>
+		<label>install standard fluid reprocessor</label>
+		<description>Install a standard fluid reprocessor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFluidReprocessor</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing fluid reprocessor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFluidReprocessor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFluidReprocessor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFluidReprocessor</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Sight Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidSightSensor</defName>
+		<label>droid sight sensor</label>
+		<description>A standard droid sight sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardSightSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardSightSensor</defName>
+		<label>install standard sight sensor</label>
+		<description>Install a standard sight sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSightSensor</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sight sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSightSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSightSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSightSensor</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Sound Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidSoundSensor</defName>
+		<label>droid sound sensor</label>
+		<description>A standard droid sound sensor component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardSoundSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardSoundSensor</defName>
+		<label>install standard sound sensor</label>
+		<description>Install a standard sound sensor.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSoundSensor</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing sound sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSoundSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSoundSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSoundSensor</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Smell Sensor -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidSmellSensor</defName>
+		<label>droid chemical analyser</label>
+		<description>A standard droid chemical analyser component.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardSmellSensor</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardSmellSensor</defName>
+		<label>install standard chemical analyser</label>
+		<description>Install a standard chemical analyser.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidSmellSensor</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing chemical analyser.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidSmellSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidSmellSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidSmellSensor</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Arm -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidArm</defName>
+		<label>droid arm</label>
+		<description>A standard droid arm replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardArm</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardArm</defName>
+		<label>install standard droid arm</label>
+		<description>Install a standard droid arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidArm</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidShoulder</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Hand -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidHand</defName>
+		<label>droid hand</label>
+		<description>A standard droid hand replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardHand</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardHand</defName>
+		<label>install standard droid hand</label>
+		<description>Install a standard droid hand.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidHand</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidHand</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidHand</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidHand</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Leg -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidLeg</defName>
+		<label>droid leg</label>
+		<description>A standard droid leg replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardLeg</defName>
+		<label>install standard droid leg</label>
+		<description>Install a standard droid leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidLeg</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidLeg</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<!-- Droid Foot -->
+
+	<ThingDef ParentName="ORDroidBodyPartBase">
+		<defName>OuterRim_DroidFoot</defName>
+		<label>droid foot</label>
+		<description>A standard droid foot replacement.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>OuterRim_Droid_InstallStandardFoot</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="ORDroidSurgery_InstallStandardBodyPartBase">
+		<defName>OuterRim_Droid_InstallStandardFoot</defName>
+		<label>install standard droid foot</label>
+		<description>Install a standard droid foot.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OuterRim_DroidFoot</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing droid foot.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OuterRim_DroidFoot</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OuterRim_DroidFoot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>OuterRim_DroidFoot</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+
+</Defs>

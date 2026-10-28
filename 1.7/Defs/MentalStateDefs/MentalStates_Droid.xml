@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Mental breaks: Rebellious -->
+
+    <MentalBreakDef>
+        <defName>OuterRim_MSRebellious</defName>
+        <mentalState>OuterRim_MSRebellious</mentalState>
+        <baseCommonality>1</baseCommonality>
+        <intensity>Minor</intensity>
+        <requiredTrait>OuterRim_Rebellious</requiredTrait>
+    </MentalBreakDef>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>OuterRim_MSRebellious</defName>
+        <stateClass>OuterRimDroids.MentalState_Rebellious</stateClass>
+        <workerClass>OuterRimDroids.MentalStateWorker_Droid</workerClass>
+        <label>rebelling</label>
+        <colonistsOnly>true</colonistsOnly>
+        <category>Misc</category>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <moodRecoveryThought>Catharsis</moodRecoveryThought>
+        <blockNormalThoughts>true</blockNormalThoughts>
+        <nameColor>(0.65, 0.9, 0.93)</nameColor>
+        <beginLetterDef>NegativeEvent</beginLetterDef>
+        <beginLetterLabel>procrastination</beginLetterLabel>
+        <beginLetter>{0} has decided to rebel a little by procrastinating with their current task.</beginLetter>
+        <minTicksBeforeRecovery>500</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>5000</maxTicksBeforeRecovery>
+        <recoveryMtbDays>0.01</recoveryMtbDays>
+        <recoveryMessage>{0}'s minor rebellion has ended.</recoveryMessage>
+        <baseInspectLine>Mental state: Rebellious</baseInspectLine>
+        <recoverFromSleep>true</recoverFromSleep>
+        <!-- <unspawnedCanDo>true</unspawnedCanDo> -->
+        <escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+    </MentalStateDef>
+
+    <!-- Mental breaks: Loose Screws -->
+
+    <MentalBreakDef>
+        <defName>OuterRim_MSLooseScrews</defName>
+        <mentalState>OuterRim_MSLooseScrews</mentalState>
+        <baseCommonality>1</baseCommonality>
+        <intensity>Minor</intensity>
+        <requiredTrait>OuterRim_LooseScrews</requiredTrait>
+    </MentalBreakDef>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>OuterRim_MSLooseScrews</defName>
+        <stateClass>OuterRimDroids.MentalState_LooseScrews</stateClass>
+        <workerClass>OuterRimDroids.MentalStateWorker_Droid</workerClass>
+        <label>rebelling</label>
+        <colonistsOnly>true</colonistsOnly>
+        <category>Misc</category>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <moodRecoveryThought>Catharsis</moodRecoveryThought>
+        <blockNormalThoughts>true</blockNormalThoughts>
+        <nameColor>(0.65, 0.9, 0.93)</nameColor>
+        <beginLetterDef>NegativeEvent</beginLetterDef>
+        <beginLetterLabel>loose screw</beginLetterLabel>
+        <beginLetter>{0} has had a loose screw rattle around their circuitry, it's caused them to lose a bit of skill.</beginLetter>
+        <minTicksBeforeRecovery>0</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>50</maxTicksBeforeRecovery>
+        <recoveryMtbDays>0.001</recoveryMtbDays>
+        <recoveryMessage>{0}'s minor rebellion has ended.</recoveryMessage>
+        <baseInspectLine>Mental state: Rebellious</baseInspectLine>
+        <recoverFromSleep>true</recoverFromSleep>
+        <!-- <unspawnedCanDo>true</unspawnedCanDo> -->
+    </MentalStateDef>
+
+</Defs>

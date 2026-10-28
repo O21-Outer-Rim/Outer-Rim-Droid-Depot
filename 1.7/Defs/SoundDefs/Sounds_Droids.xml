@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>OuterRim_Droid_Silent</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>OuterRim/Silent</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>18.91304</min>
+					<max>18.91304</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>OuterRim_Droid_Gonk</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>OuterRim/Droids/gonk</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>18.91304</min>
+					<max>18.91304</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>OuterRim_Droid_MSE_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>OuterRim/Droids/MSE/general</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>23.91304</min>
+					<max>23.91304</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>OuterRim_Droid_MSE_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>OuterRim/Droids/MSE/flee</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>23.91304</min>
+					<max>23.91304</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>OuterRim_Droid_MSE_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>OuterRim/Droids/MSE/chirp</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>23.91304</min>
+					<max>23.91304</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>
